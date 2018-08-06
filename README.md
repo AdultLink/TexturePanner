@@ -1,17 +1,31 @@
 # TexturePanner [![License](https://img.shields.io/badge/License-MIT-lightgrey.svg?style=flat)](http://adultlink.mit-license.org) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/adultlink/5usd)
 ![screenshot](Screenshots/ThrustersExample.gif)
 
-This shader is a glorified texture panner, with a few extra features oriented towards adding variety
-It can be modified through [Amplify Shader Editor](http://amplify.pt/unity/amplify-shader-editor)
+This shader is a glorified texture panner, with a few extra features oriented towards adding variety. It can be modified through [Amplify Shader Editor](http://amplify.pt/unity/amplify-shader-editor) and contributions to the project are always welcome!
 ## Setup
 ### Getting started
 The setup for this shader is minimal, all you need to do is create a new material and assign a base texture, which will be scrolled over the UVs. Assign this new material to a quad and there we go, we now have a scrolling texture:
 
+![screenshot](Screenshots/BasicExample.gif)
 
+When using textures that allow transparency (.png for instance), this information is taken into consideration:
+
+![screenshot](Screenshots/BasicExample2.gif)
+
+### Using your own meshes
+
+Depending on your project, you will most have likely have the need to use meshes other than a quad. In this case, we need to be mindful of the UVs. If we use the default cube mesh in Unity as our mesh, the texture we chose will scroll over every face:
+
+//SCREENSHOT OF UNITY CUBE AND ARROW TEXTURE
+
+Furthermore, we can see both side faces are going against each other, thus breaking the scrolling effect. We need to lay out the UVs of our mesh in a way that allows for easy scrolling. For instance, if our goal is to create some kind of SCROLLING THINGY, we need to get rid of the top and bottom faces, and orient all the side faces in the same direction.
+
+It is recommended to layout all the faces inside the UV square for cleaner results. This means our texture will stretch across all the faces, which me may not want, but we can always tile it in the inspector:
+
+//DO NOT ENTER CUBE
 
 ## Examples
 ## Usage, parameters
-## Mesh & UV Preparation
 ## License
 MIT License
 
