@@ -16,15 +16,22 @@ When using textures that allow transparency (.png for instance), this informatio
 
 Depending on your project, you will most have likely have the need to use meshes other than a quad. In this case, we need to be mindful of the UVs. If we use the default cube mesh in Unity as our mesh, the texture we chose will scroll over every face:
 
-//SCREENSHOT OF UNITY CUBE AND ARROW TEXTURE
+![screenshot](Screenshots/BasicExample3.gif)
 
 Furthermore, we can see both side faces are going against each other, thus breaking the scrolling effect. We need to lay out the UVs of our mesh in a way that allows for easy scrolling. For instance, if our goal is to create some kind of SCROLLING THINGY, we need to get rid of the top and bottom faces, and orient all the side faces in the same direction.
 
 It is recommended to layout all the faces inside the UV square for cleaner results. This means our texture will stretch across all the faces, which me may not want, but we can always tile it in the inspector:
 
-//DO NOT ENTER CUBE
+![screenshot](Screenshots/BlenderCubeUVs.gif)
+![screenshot](Screenshots/BlenderCubeExample.gif)
 
 ## Examples
+
+![screenshot](Screenshots/LoadingRings.gif)
+![screenshot](Screenshots/ConveryorBelts.gif)
+![screenshot](Screenshots/Thrusters.gif)
+![screenshot](Screenshots/Buildings.gif)
+
 ## Usage, parameters
 ## License
 MIT License
