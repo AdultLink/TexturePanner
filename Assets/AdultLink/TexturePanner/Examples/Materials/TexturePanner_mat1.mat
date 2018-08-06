@@ -112,7 +112,7 @@ Material:
     - _ScanlinesspeedZ: -5
     - _ScrollOffset: 1
     - _Scrolling: 1
-    - _ScrollingspeedX: 0.03
+    - _ScrollingspeedX: 0.1
     - _ScrollingspeedY: 0
     - _Scrolloffset: 1
     - _Sharp: 0
