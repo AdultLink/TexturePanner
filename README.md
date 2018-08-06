@@ -1,8 +1,17 @@
 # TexturePanner [![License](https://img.shields.io/badge/License-MIT-lightgrey.svg?style=flat)](http://adultlink.mit-license.org) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/adultlink/5usd)
 ![screenshot](Screenshots/ThrustersExample.gif)
+
+This shader is a glorified texture panner, with a few extra features oriented towards adding variety
+It can be modified through [Amplify Shader Editor](http://amplify.pt/unity/amplify-shader-editor)
 ## Setup
+### Getting started
+The setup for this shader is minimal, all you need to do is create a new material and assign a base texture, which will be scrolled over the UVs. Assign this new material to a quad and there we go, we now have a scrolling texture:
+
+
+
 ## Examples
-## Usage
+## Usage, parameters
+## Mesh & UV Preparation
 ## License
 MIT License
 
