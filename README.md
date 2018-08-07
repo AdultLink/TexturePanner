@@ -18,7 +18,7 @@ Depending on your project, you will most have likely have the need to use meshes
 
 ![screenshot](Screenshots/BasicExample3.gif)
 
-Furthermore, we can see both side faces are going against each other, thus breaking the scrolling effect. We need to lay out the UVs of our mesh in a way that allows for easy scrolling. For instance, if our goal is to create some kind of SCROLLING THINGY, we need to get rid of the top and bottom faces, and orient all the side faces in the same direction.
+Furthermore, we can see both side faces are going against each other, thus breaking the scrolling effect. We need to lay out the UVs of our mesh in a way that allows for easy scrolling. For instance, if our goal is to make the arrows loop through the side faces of the cube, we need to get rid of the top and bottom faces, and orient all the side faces in the same direction.
 
 It is recommended to layout all the faces inside the UV square for cleaner results. This means our texture will stretch across all the faces, which me may not want, but we can always tile it in the inspector:
 
