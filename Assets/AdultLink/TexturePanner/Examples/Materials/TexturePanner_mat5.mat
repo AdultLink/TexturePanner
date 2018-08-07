@@ -8,10 +8,10 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: TexturePanner_mat5
   m_Shader: {fileID: 4800000, guid: 4d846dee7d5e44743a993157b1b14b43, type: 3}
-  m_ShaderKeywords: _COLORMODE_ORIGINAL _EMISSION _GLOBALEMISSIONFLICKER_ON _NOTRANSPARENCY_ON
-    _OFFSETSCROLL_SCROLL _SCROLLOFFSET_OFFSET _SCROLLOFFSET_ON _SHARPX_ON _SHARPY_ON
-    _SHARPZ_ON _S_OFFSET _TINTTEXTURE_DONTTINT _TINTTEXTURE_MULTIPLY _TINTTEXTURE_ON
-    _VERTICALMOVEMENT_ON
+  m_ShaderKeywords: _COLORMODE_ORIGINAL _GLOBALEMISSIONFLICKER_ON _NOTRANSPARENCY_ON
+    _OFFSETSCROLL_SCROLL _SCROLLOFFSET_OFFSET _SCROLLOFFSET_ON _SCROLLROTATE_NONE
+    _SHARPX_ON _SHARPY_ON _SHARPZ_ON _S_OFFSET _TINTTEXTURE_DONTTINT _TINTTEXTURE_MULTIPLY
+    _TINTTEXTURE_ON _VERTICALMOVEMENT_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -94,6 +94,10 @@ Material:
     - _OcclusionStrength: 1
     - _OffsetScroll: 1
     - _Parallax: 0.02
+    - _RotateUVs: 0
+    - _Rotation: 0
+    - _RotationSpeed: 1
+    - _Rotationspeed: 1
     - _Scale1: 200
     - _Scale2: 200
     - _Scanlines: 0
@@ -111,10 +115,12 @@ Material:
     - _ScanlinesspeedY: 0
     - _ScanlinesspeedZ: -5
     - _ScrollOffset: 1
+    - _ScrollRotate: 0
     - _Scrolling: 0
     - _ScrollingspeedX: -0.2
     - _ScrollingspeedY: 0
     - _Scrolloffset: 1
+    - _Scrollrotate: 2
     - _Sharp: 0
     - _SharpX: 1
     - _SharpY: 1

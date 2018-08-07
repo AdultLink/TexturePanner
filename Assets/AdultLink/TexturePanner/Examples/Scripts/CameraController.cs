@@ -44,24 +44,17 @@ public class CameraController : MonoBehaviour {
 				setCursorVisibility(false);
 			}
 		}
+
+		//FREE VIEW
 		if (freeView){
-			if (lockCursor) {
+			if (lockCursor){
 				movementSpeed = Mathf.Max(movementSpeed += Input.GetAxis("Mouse ScrollWheel"), 0.0f);
 				transform.position += (transform.right * Input.GetAxis("Horizontal") + transform.forward * Input.GetAxis("Vertical")) * movementSpeed;
 				transform.eulerAngles += new Vector3(-Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"), 0f);
-
-				if (Input.GetKey(KeyCode.Escape)) {
-					setCursorVisibility(true);
-				}
 				detectElement();
 			}
-			else {
-				if (Input.GetKey(KeyCode.Mouse0)) {
-					setCursorVisibility(false);
-				}
-			}
-
 		}
+		//"GALLERY" MODE
 		else {
 			if (Input.GetKeyDown(KeyCode.LeftArrow)) {
 				positionIndex -= 1;
@@ -85,7 +78,12 @@ public class CameraController : MonoBehaviour {
 
 		}
 		//INTERFACE STUFF
-
+		if (Input.GetKey(KeyCode.Escape)) {
+			setCursorVisibility(true);
+		}
+		if (Input.GetKey(KeyCode.Mouse0)) {
+			setCursorVisibility(false);
+		}
 
 
 	}

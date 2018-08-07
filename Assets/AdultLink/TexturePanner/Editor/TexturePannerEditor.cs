@@ -12,10 +12,11 @@ public class TexturePannerEditor : ShaderGUI
 	private MaterialProperty _Tiling = null;
 	private MaterialProperty _Color = null;
 	private MaterialProperty _Colormode = null;
-	//SCROLLING
-	private MaterialProperty _Scrolling = null;
+	//SCROLLING/ROTATING
+	private MaterialProperty _Scrollrotate = null;
 	private MaterialProperty _ScrollingspeedX = null;
 	private MaterialProperty _ScrollingspeedY = null;
+	private MaterialProperty _RotationSpeed = null;
 
 	//SCANLINES
 	private MaterialProperty _ScanlinesX = null;
@@ -80,7 +81,7 @@ public class TexturePannerEditor : ShaderGUI
 		if (ShowGeneralSettings){
 			DrawMainSettings();
 		}
-		ShowScrollingSettings = EditorGUILayout.Foldout(ShowScrollingSettings, "Scrolling", foldoutStyle);
+		ShowScrollingSettings = EditorGUILayout.Foldout(ShowScrollingSettings, "Scrolling/Rotating", foldoutStyle);
 		if (ShowScrollingSettings){
 			DrawScrollingSettings();
 		}
@@ -110,10 +111,11 @@ public class TexturePannerEditor : ShaderGUI
 		_Tiling = FindProperty("_Tiling", _properties);
 		_Color = FindProperty("_Color", _properties);
 		_Colormode = FindProperty("_Colormode", _properties);
-		//SCROLLING
-		_Scrolling = FindProperty("_Scrolling", _properties);
+		//SCROLLING/ROTATING
+		_Scrollrotate = FindProperty("_Scrollrotate", _properties);
 		_ScrollingspeedX = FindProperty("_ScrollingspeedX", _properties);
 		_ScrollingspeedY = FindProperty("_ScrollingspeedY", _properties);
+		_RotationSpeed = FindProperty("_RotationSpeed", _properties);
 		//SCANLINES
 		_ScanlinesX = FindProperty("_ScanlinesX", _properties);
 		_ScanlinesscaleX = FindProperty("_ScanlinesscaleX", _properties);
@@ -216,9 +218,10 @@ public class TexturePannerEditor : ShaderGUI
 		GUILayout.Space(-3);
         EditorGUI.indentLevel++;
 		_materialEditor.SetDefaultGUIWidths();
-		_materialEditor.ShaderProperty(_Scrolling, "Enable");
+		_materialEditor.ShaderProperty(_Scrollrotate, "Scroll/Rotate/None");
 		_materialEditor.ShaderProperty(_ScrollingspeedX, _ScrollingspeedX.displayName);
 		_materialEditor.ShaderProperty(_ScrollingspeedY, _ScrollingspeedY.displayName);
+		_materialEditor.ShaderProperty(_RotationSpeed, _RotationSpeed.displayName);
 		EditorGUI.indentLevel--;
 		}
 	
