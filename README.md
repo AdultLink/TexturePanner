@@ -25,6 +25,10 @@ It is recommended to layout all the faces inside the UV square for cleaner resul
 ![screenshot](Screenshots/BlenderCubeUVs.gif)
 ![screenshot](Screenshots/BlenderCubeExample.gif)
 
+## Usage, parameters
+
+**WIP**
+
 ## Examples
 
 ![screenshot](Screenshots/LoadingRings.gif)
@@ -32,7 +36,6 @@ It is recommended to layout all the faces inside the UV square for cleaner resul
 ![screenshot](Screenshots/ThrustersExample.gif)
 ![screenshot](Screenshots/Buildings.gif)
 
-## Usage, parameters
 ## License
 MIT License
 
