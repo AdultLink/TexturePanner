@@ -28,7 +28,7 @@ It is recommended to layout all the faces inside the UV square for cleaner resul
 ## Examples
 
 ![screenshot](Screenshots/LoadingRings.gif)
-![screenshot](Screenshots/ConveryorBelts.gif)
+![screenshot](Screenshots/ConveyorBelts.gif)
 ![screenshot](Screenshots/ThrustersExample.gif)
 ![screenshot](Screenshots/Buildings.gif)
 
