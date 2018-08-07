@@ -1,5 +1,5 @@
 # TexturePanner [![License](https://img.shields.io/badge/License-MIT-lightgrey.svg?style=flat)](http://adultlink.mit-license.org) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/adultlink/5usd)
-![screenshot](Screenshots/ThrustersExample.gif)
+![screenshot](Screenshots/Misc.gif)
 
 This shader is a glorified texture panner, with a few extra features oriented towards adding variety. It can be modified through [Amplify Shader Editor](http://amplify.pt/unity/amplify-shader-editor) and contributions to the project are always welcome!
 ## Setup
@@ -29,7 +29,7 @@ It is recommended to layout all the faces inside the UV square for cleaner resul
 
 ![screenshot](Screenshots/LoadingRings.gif)
 ![screenshot](Screenshots/ConveryorBelts.gif)
-![screenshot](Screenshots/Thrusters.gif)
+![screenshot](Screenshots/ThrustersExample.gif)
 ![screenshot](Screenshots/Buildings.gif)
 
 ## Usage, parameters
