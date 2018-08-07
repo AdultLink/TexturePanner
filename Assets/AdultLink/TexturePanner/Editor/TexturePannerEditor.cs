@@ -51,6 +51,19 @@ public class TexturePannerEditor : ShaderGUI
 	private MaterialProperty _Verticalmovementfreq = null;
 	private MaterialProperty _Verticalmovementoffset = null;
 
+	//HORIZONTAL STRETCH
+	private MaterialProperty _Horizontalstretch = null;
+	private MaterialProperty _Horizontalstretchamplitude = null;
+	private MaterialProperty _Horizontalstretchfreq = null;
+	private MaterialProperty _Horizontalstretchpivotpoint = null;
+	private MaterialProperty _Horizontalstretchoffset = null;
+
+	//HORIZONTAL MOVEMENT
+	private MaterialProperty _Horizontalmovement = null;
+	private MaterialProperty _Horizontalmovementamplitude = null;
+	private MaterialProperty _Horizontalmovementfreq = null;
+	private MaterialProperty _Horizontalmovementoffset = null;
+
 	//FOLDOUT BOOLS
 
 	protected static bool ShowGeneralSettings = true;
@@ -60,8 +73,12 @@ public class TexturePannerEditor : ShaderGUI
 	protected static bool ShowScanlinesXSettings = true;
 	protected static bool ShowScanlinesYSettings = true;
 	protected static bool ShowScanlinesZSettings = true;
+	protected static bool ShowStretchSettings = true;
 	protected static bool ShowVerticalStretchSettings = true;
+	protected static bool ShowHorizontalStretchSettings = true;
+	protected static bool ShowDisplacementSettings = true;
 	protected static bool ShowVerticalDisplacementSettings = true;
+	protected static bool ShowHorizontalDisplacementSettings = true;
 	GUIStyle foldoutStyle = new GUIStyle(EditorStyles.foldout);
 
 	public override void OnGUI(MaterialEditor materialEditor, MaterialProperty[] properties)
@@ -93,13 +110,13 @@ public class TexturePannerEditor : ShaderGUI
 		if (ShowScanlinesSettings){
 			DrawScanlinesSettings();
 		}
-		ShowVerticalStretchSettings = EditorGUILayout.Foldout(ShowVerticalStretchSettings, "Vertical stretch", foldoutStyle);
-		if (ShowVerticalStretchSettings){
-			DrawVerticalstretchSettings();
+		ShowStretchSettings = EditorGUILayout.Foldout(ShowStretchSettings, "Stretching", foldoutStyle);
+		if (ShowStretchSettings){
+			DrawStretchSettings();
 		}
-		ShowVerticalDisplacementSettings = EditorGUILayout.Foldout(ShowVerticalDisplacementSettings, "Vertical displacement", foldoutStyle);
-		if (ShowVerticalDisplacementSettings){
-			DrawVerticaldisplacementSettings();
+		ShowDisplacementSettings = EditorGUILayout.Foldout(ShowDisplacementSettings, "Displacement", foldoutStyle);
+		if (ShowDisplacementSettings){
+			DrawDisplacementSettings();
 		}
     }
 
@@ -136,17 +153,30 @@ public class TexturePannerEditor : ShaderGUI
 		_Globalemissionflickeramplitude = FindProperty("_Globalemissionflickeramplitude", _properties);
 		_Globalemissionflickerfreq = FindProperty("_Globalemissionflickerfreq", _properties);
 		_Globalemissionflickeroffset = FindProperty("_Globalemissionflickeroffset", _properties);
+
 		//VERTICAL STRETCH
 		_Verticalstretch = FindProperty("_Verticalstretch", _properties);
 		_Verticalstretchamplitude = FindProperty("_Verticalstretchamplitude", _properties);
 		_Verticalstretchfreq = FindProperty("_Verticalstretchfreq", _properties);
 		_Verticalstretchoffset = FindProperty("_Verticalstretchoffset", _properties);
 		_Verticalstretchpivotpoint = FindProperty("_Verticalstretchpivotpoint", _properties);
-		//VERTICALMOVEMENT
+		//VERTICAL MOVEMENT
 		_Verticalmovement = FindProperty("_Verticalmovement", _properties);
 		_Verticalmovementamplitude = FindProperty("_Verticalmovementamplitude", _properties);
 		_Verticalmovementfreq = FindProperty("_Verticalmovementfreq", _properties);
 		_Verticalmovementoffset = FindProperty("_Verticalmovementoffset", _properties);
+
+		//HORIZONTAL STRETCH
+		_Horizontalstretch = FindProperty("_Horizontalstretch", _properties);
+		_Horizontalstretchamplitude = FindProperty("_Horizontalstretchamplitude", _properties);
+		_Horizontalstretchfreq = FindProperty("_Horizontalstretchfreq", _properties);
+		_Horizontalstretchoffset = FindProperty("_Horizontalstretchoffset", _properties);
+		_Horizontalstretchpivotpoint = FindProperty("_Horizontalstretchpivotpoint", _properties);
+		//HORIZONTAL MOVEMENT
+		_Horizontalmovement = FindProperty("_Horizontalmovement", _properties);
+		_Horizontalmovementamplitude = FindProperty("_Horizontalmovementamplitude", _properties);
+		_Horizontalmovementfreq = FindProperty("_Horizontalmovementfreq", _properties);
+		_Horizontalmovementoffset = FindProperty("_Horizontalmovementoffset", _properties);
 	}
 
 	void DrawMainSettings() {
@@ -226,28 +256,58 @@ public class TexturePannerEditor : ShaderGUI
 		}
 	
 
-	void DrawVerticalstretchSettings() {
+	void DrawStretchSettings() {
 		//VERTICAL STRETCH
 		GUILayout.Space(-3);
         EditorGUI.indentLevel++;
 		_materialEditor.SetDefaultGUIWidths();
-		_materialEditor.ShaderProperty(_Verticalstretch, "Enable");
-		_materialEditor.ShaderProperty(_Verticalstretchamplitude, "Amplitude");
-		_materialEditor.ShaderProperty(_Verticalstretchfreq, "Frequency");
-		_materialEditor.ShaderProperty(_Verticalstretchpivotpoint, "Point of origin offset");
-		_materialEditor.ShaderProperty(_Verticalstretchoffset, "Offset");
+		ShowVerticalStretchSettings = EditorGUILayout.Foldout(ShowVerticalStretchSettings, "Vertical stretching", foldoutStyle);
+		if (ShowVerticalStretchSettings){
+			EditorGUI.indentLevel++;
+			_materialEditor.ShaderProperty(_Verticalstretch, "Enable");
+			_materialEditor.ShaderProperty(_Verticalstretchamplitude, "Amplitude");
+			_materialEditor.ShaderProperty(_Verticalstretchfreq, "Frequency");
+			_materialEditor.ShaderProperty(_Verticalstretchpivotpoint, "Point of origin offset");
+			_materialEditor.ShaderProperty(_Verticalstretchoffset, "Offset");
+			EditorGUI.indentLevel--;
+		}
+		ShowHorizontalStretchSettings = EditorGUILayout.Foldout(ShowHorizontalStretchSettings, "Horizontal stretching", foldoutStyle);
+		if (ShowHorizontalStretchSettings){
+			EditorGUI.indentLevel++;
+			_materialEditor.ShaderProperty(_Horizontalstretch, "Enable");
+			_materialEditor.ShaderProperty(_Horizontalstretchamplitude, "Amplitude");
+			_materialEditor.ShaderProperty(_Horizontalstretchfreq, "Frequency");
+			_materialEditor.ShaderProperty(_Horizontalstretchpivotpoint, "Point of origin offset");
+			_materialEditor.ShaderProperty(_Horizontalstretchoffset, "Offset");
+			EditorGUI.indentLevel--;
+		}
 		EditorGUI.indentLevel--;
 	}
 
-	void DrawVerticaldisplacementSettings() {
+	void DrawDisplacementSettings() {
 		//VERTICAL MOVEMENT
 		GUILayout.Space(-3);
         EditorGUI.indentLevel++;
-		_materialEditor.SetDefaultGUIWidths();
-		_materialEditor.ShaderProperty(_Verticalmovement, "Enable");
-		_materialEditor.ShaderProperty(_Verticalmovementamplitude, "Amplitude");
-		_materialEditor.ShaderProperty(_Verticalmovementfreq, "Frequency");
-		_materialEditor.ShaderProperty(_Verticalmovementoffset, "Point of origin offset");
+		ShowVerticalDisplacementSettings = EditorGUILayout.Foldout(ShowVerticalDisplacementSettings, "Vertical displacement", foldoutStyle);
+		if (ShowVerticalStretchSettings){
+			EditorGUI.indentLevel++;
+			_materialEditor.SetDefaultGUIWidths();
+			_materialEditor.ShaderProperty(_Verticalmovement, "Enable");
+			_materialEditor.ShaderProperty(_Verticalmovementamplitude, "Amplitude");
+			_materialEditor.ShaderProperty(_Verticalmovementfreq, "Frequency");
+			_materialEditor.ShaderProperty(_Verticalmovementoffset, "Point of origin offset");
+			EditorGUI.indentLevel--;
+		}
+		ShowHorizontalDisplacementSettings = EditorGUILayout.Foldout(ShowHorizontalDisplacementSettings, "Horizontal displacement", foldoutStyle);
+		if (ShowHorizontalStretchSettings){
+			EditorGUI.indentLevel++;
+			_materialEditor.SetDefaultGUIWidths();
+			_materialEditor.ShaderProperty(_Horizontalmovement, "Enable");
+			_materialEditor.ShaderProperty(_Horizontalmovementamplitude, "Amplitude");
+			_materialEditor.ShaderProperty(_Horizontalmovementfreq, "Frequency");
+			_materialEditor.ShaderProperty(_Horizontalmovementoffset, "Point of origin offset");
+			EditorGUI.indentLevel--;
+		}
 		EditorGUI.indentLevel--;
 	}
     

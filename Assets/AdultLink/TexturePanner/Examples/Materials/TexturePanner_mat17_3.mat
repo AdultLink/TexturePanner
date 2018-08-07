@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: TexturePanner_mat17_3
-  m_Shader: {fileID: 4800000, guid: 56a71a06eb5159742ba5d93df9606d61, type: 3}
+  m_Shader: {fileID: 4800000, guid: 7f678362d077aea47a543329ff703ee7, type: 3}
   m_ShaderKeywords: _COLORMODE_MULTIPLY _KEYWORD0_SCROLL _NOTRANSPARENCY_ON _OFFSETSCROLL_SCROLL
     _SCROLLING_ON _SCROLLOFFSET_OFFSET _SCROLLOFFSET_ON _SCROLLROTATE_SCROLL _SHARPX_ON
     _SHARPY_ON _SHARPZ_ON _S_OFFSET _TINTTEXTURE_DONTTINT _TINTTEXTURE_MULTIPLY _TINTTEXTURE_ON
@@ -88,6 +88,15 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _Horizontalmovement: 0
+    - _Horizontalmovementamplitude: 0.5
+    - _Horizontalmovementfreq: 1
+    - _Horizontalmovementoffset: 0
+    - _Horizontalstretch: 0
+    - _Horizontalstretchamplitude: 0.5
+    - _Horizontalstretchfreq: 0.5
+    - _Horizontalstretchoffset: 0
+    - _Horizontalstretchpivotpoint: 0
     - _Keyword0: 0
     - _Metallic: 0
     - _Mode: 0
@@ -153,6 +162,6 @@ Material:
     - _Scanlinestiling: {r: 1, g: 2, b: 0, a: 0}
     - _Scrollingspeed: {r: 0, g: 0, b: 0, a: 0}
     - _Scrollspeed: {r: 1, g: 0, b: 0, a: 0}
-    - _Tiling: {r: 5, g: 1, b: 0, a: 0}
+    - _Tiling: {r: 2, g: 1, b: 0, a: 0}
     - _Tintcolor: {r: 1.2940001, g: 0, b: 0, a: 1}
     - _Vector0: {r: 0.33, g: 0, b: 0, a: 0}

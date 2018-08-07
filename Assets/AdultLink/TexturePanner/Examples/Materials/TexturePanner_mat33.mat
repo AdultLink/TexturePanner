@@ -88,6 +88,15 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _Horizontalmovement: 0
+    - _Horizontalmovementamplitude: 0.5
+    - _Horizontalmovementfreq: 1
+    - _Horizontalmovementoffset: 0
+    - _Horizontalstretch: 0
+    - _Horizontalstretchamplitude: 0.5
+    - _Horizontalstretchfreq: 0.5
+    - _Horizontalstretchoffset: 0
+    - _Horizontalstretchpivotpoint: 0
     - _Metallic: 0
     - _Mode: 0
     - _Notransparency: 1

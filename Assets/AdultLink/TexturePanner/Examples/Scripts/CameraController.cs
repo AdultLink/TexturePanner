@@ -77,7 +77,8 @@ public class CameraController : MonoBehaviour {
 			transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(targetRot), Time.deltaTime* rotationSpeed);
 
 		}
-		//INTERFACE STUFF
+
+		
 		if (Input.GetKey(KeyCode.Escape)) {
 			setCursorVisibility(true);
 		}

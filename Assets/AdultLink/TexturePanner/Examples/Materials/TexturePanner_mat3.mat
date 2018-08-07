@@ -88,12 +88,22 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _Horizontalmovement: 0
+    - _Horizontalmovementamplitude: 0.2
+    - _Horizontalmovementfreq: 1
+    - _Horizontalmovementoffset: 0
+    - _Horizontalstretch: 0
+    - _Horizontalstretchamplitude: 0.156
+    - _Horizontalstretchfreq: 10
+    - _Horizontalstretchoffset: 0
+    - _Horizontalstretchpivotpoint: 0
     - _Metallic: 0
     - _Mode: 0
     - _Notransparency: 1
     - _OcclusionStrength: 1
     - _OffsetScroll: 1
     - _Parallax: 0.02
+    - _RotationSpeed: 1
     - _Scale1: 200
     - _Scale2: 200
     - _Scanlines: 0
@@ -115,6 +125,7 @@ Material:
     - _ScrollingspeedX: -1
     - _ScrollingspeedY: 0
     - _Scrolloffset: 1
+    - _Scrollrotate: 0
     - _Sharp: 0
     - _SharpX: 1
     - _SharpY: 1
