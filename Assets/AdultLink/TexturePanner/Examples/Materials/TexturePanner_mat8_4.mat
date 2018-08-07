@@ -93,6 +93,7 @@ Material:
     - _OcclusionStrength: 1
     - _OffsetScroll: 1
     - _Parallax: 0.02
+    - _RotationSpeed: 1
     - _Scale1: 200
     - _Scale2: 200
     - _Scanlines: 0
@@ -111,9 +112,10 @@ Material:
     - _ScanlinesspeedZ: -5
     - _ScrollOffset: 1
     - _Scrolling: 1
-    - _ScrollingspeedX: 1
+    - _ScrollingspeedX: -1
     - _ScrollingspeedY: 0
     - _Scrolloffset: 1
+    - _Scrollrotate: 0
     - _Sharp: 0
     - _SharpX: 1
     - _SharpY: 1
