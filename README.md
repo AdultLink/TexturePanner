@@ -61,7 +61,7 @@ Texture tiling, offset and color mixing fall under this category. Color mixing o
 - Multiply: Direct multiplication of both colors.
 - Replace: Gives a new color to the whole texture.
 
-## Scrolling & Rotation
+## Scrolling/Rotation
 ## Scanlines
 ## Stretching
 ## Displacement
