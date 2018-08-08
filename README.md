@@ -11,9 +11,9 @@ Project developed using **Unity 2017.4.8f1**. Please use this version if you are
 1. [Setup](#setup)
    - 1.1 [Getting started](#getting-started)
    - 1.2 [Using your own meshes](#using-your-own-meshes)
-2. [Usage, parameters](#usage-parameters)
+2. [Usage & parameters](#usage-&-parameters)
    - 2.1 [General settings](#general-settings)
-   - 2.2 [Scrolling & rotation](#scrollingrotation)
+   - 2.2 [Scrolling & rotation](#scrolling-&-rotation)
    - 2.3 [Scanlines](#scanlines)
    - 2.4 [Stretching](#stretching)
    - 2.5 [Displacement](#displacement)
@@ -45,7 +45,7 @@ It is recommended to layout all the faces inside the UV square for cleaner resul
 ![BlenderCubeUVs](Screenshots/BlenderCubeUVs.gif)
 ![BlenderCubeExample](Screenshots/BlenderCubeExample.gif)
 
-# Usage, parameters
+# Usage & parameters
 
 **WIP**
 
@@ -61,7 +61,7 @@ Texture tiling, offset and color mixing fall under this category. Color mixing o
 - Multiply: Direct multiplication of both colors.
 - Replace: Gives a new color to the whole texture.
 
-## Scrolling/Rotation
+## Scrolling & Rotation
 ## Scanlines
 ## Stretching
 ## Displacement
