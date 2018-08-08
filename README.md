@@ -9,11 +9,11 @@ Project developed using **Unity 2017.4.8f1**. Please use this version if you are
 
 # Table of contents
 1. [Setup](#setup)
-   - 1.1 Getting started
-   - 1.2 Using your own meshes
-2. Usage, parameters
-3. Examples
-4. License
+   - 1.1 [Getting started](#getting-started)
+   - 1.2 [Using your own meshes](#using-your-own-meshes)
+2. [Usage, parameters](#usage-parameters)
+3. [Examples](#examples)
+4. [License](#license)
 
 # Setup
 ## Getting started
