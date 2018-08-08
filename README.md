@@ -46,10 +46,33 @@ It is recommended to layout all the faces inside the UV square for cleaner resul
 
 # Examples
 
+3D space loading rings are a great application for scrolling textures, since you can easily create unique-looking pieces.
+
 ![screenshot](Screenshots/LoadingRings.gif)
+
+Conveyor belts are the prime example for texture scrolling, since they illustrate the concept perfectly.
+
+A slightly different version of the shader (TexturePanner_opaque) is used for these ones, which can cast and receive shadows.
+
 ![screenshot](Screenshots/ConveyorBelts.gif)
+
+Texture panning is a simple concept that we can take advantage of to create a huge variety of effects.
+
+We are just simply scrolling said texture over a mesh, but the results we can achieve are really diverse.
+
+By stretching the mesh and scrolling the texture at high speeds, we get a twitchy behaviour, resembling the appearance of spaceship thrusters.
+
 ![screenshot](Screenshots/ThrustersExample.gif)
+
+Given the appropriate mesh and UV setup, this shader can be used to achieve that futuristic cyberpunk neon ad look, including scanlines.
+
+Also, A E S T H E T I C.
+
 ![screenshot](Screenshots/Buildings.gif)
+
+Imagination is the limit!
+
+Experiment with new geometries and effect combinations. Sometimes the most fun outcomes are the result of just fooling around!
 
 # License
 MIT License
