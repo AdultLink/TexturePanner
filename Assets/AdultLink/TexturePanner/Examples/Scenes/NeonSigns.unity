@@ -18420,21 +18420,33 @@ MonoBehaviour:
   - name: Loading Rings
     pos: {x: -8.457636, y: 27.318, z: -35.27161}
     rot: {x: -33.678, y: -301.036, z: 0}
-    description: 'A more conventional use for texture scrolling '
+    description: 3D space loading rings are a great application for scrolling textures,
+      since you can easily create unique-looking pieces.
   - name: Conveyor belts
     pos: {x: -7.587406, y: 33.39424, z: -46.31868}
     rot: {x: 0.619, y: -269.04, z: 0.001}
     description: 'Conveyor belts are the prime example for texture scrolling, since
-      they illustrate '
+      they illustrate the concept perfectly.
+
+
+      A slightly different version of the shader (TexturePanner_opaque) is used for
+      these ones, which can cast and receive shadows.'
   - name: Building ads
     pos: {x: -18.03734, y: 34.54888, z: -37.32872}
     rot: {x: -10.278, y: -179.046, z: 0.049}
-    description: Given the correct mesh and UV setup, this shader can be used to achieve
-      that futuristic cyberpunk neon ad look
+    description: 'Given the appropriate mesh and UV setup, this shader can be used
+      to achieve that futuristic cyberpunk neon ad look, including scanlines.
+
+
+      Also, A E S T H E T I C.'
   - name: Miscellaneous
     pos: {x: -27.86697, y: 29.54939, z: -39.81114}
     rot: {x: -7.012001, y: -398.955, z: 0.048}
-    description: Imagination is the limit!
+    description: 'Imagination is the limit!
+
+
+      Experiment with new geometries and effect combinations. Sometimes the most fun
+      outcomes are the result of just fooling around!'
 --- !u!1 &1094148179
 GameObject:
   m_ObjectHideFlags: 0
@@ -19518,7 +19530,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 17, y: -127.86}
-  m_SizeDelta: {x: 352.7, y: 681.64}
+  m_SizeDelta: {x: 352.7, y: 540.3}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1265973246
 MonoBehaviour:
@@ -22428,7 +22440,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: -2.5, y: -20.5}
-  m_SizeDelta: {x: 303.6, y: 653.2}
+  m_SizeDelta: {x: 303.6, y: 495.5}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1779442952
 MonoBehaviour:
@@ -22462,7 +22474,16 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Description asd a eg erh eth tnt  Description Description Description '
+  m_Text: 'Texture panning is a simple concept that we can take advantage of to create
+    a huge variety of effects.
+
+
+    We are just simply scrolling said texture over a mesh, but the results we can
+    achieve are really diverse.
+
+
+    By stretching the mesh and scrolling the texture at high speeds, we get a twitchy
+    behaviour, resembling the appearance of spaceship thrusters.'
 --- !u!222 &1779442953
 CanvasRenderer:
   m_ObjectHideFlags: 0
