@@ -11,7 +11,12 @@ Project developed using **Unity 2017.4.8f1**. Please use this version if you are
 1. [Setup](#setup)
    - 1.1 [Getting started](#getting-started)
    - 1.2 [Using your own meshes](#using-your-own-meshes)
-2. [Usage, parameters](#usage-parameters)
+2. [Usage & parameters](#usage-parameters)
+   - 2.1 [General settings](#general-settings)
+   - 2.2 [Scrolling & rotation](#scrollingrotation)
+   - 2.3 [Scanlines](#scanlines)
+   - 2.4 [Stretching](#stretching)
+   - 2.5 [Displacement](#displacement)
 3. [Examples](#examples)
 4. [License](#license)
 
@@ -21,9 +26,7 @@ The setup for this shader is minimal, all you need to do is create a new materia
 
 ![BasicExample](Screenshots/BasicExample.gif)
 
-When using textures that allow transparency (.png for instance), this information is taken into consideration:
-
-![BasicExample2](Screenshots/BasicExample2.gif)
+When using textures that allow transparency (.png for instance), this information is taken into consideration.
 
 ## Using your own meshes
 
@@ -79,7 +82,7 @@ We are just simply scrolling said texture over a mesh, but the results we can ac
 
 By stretching the mesh and scrolling the texture at high speeds, we get a twitchy behaviour, resembling the appearance of spaceship thrusters.
 
-![ThrustersExample](Screenshots/ThrustersExample.gif)
+![ThrustersExample](Screenshots/Thrusters.gif)
 
 Given the appropriate mesh and UV setup, this shader can be used to achieve that futuristic cyberpunk neon ad look, including scanlines.
 
@@ -89,7 +92,7 @@ Also, _A E S T H E T I C_.
 
 Imagination is the limit!
 
-Experiment with new geometries and effect combinations. Sometimes the most fun outcomes are the result of just fooling around!
+Experiment with new geometries and effect combinations. Sometimes the most fun outcomes are the result of just toying around!
 
 # License
 MIT License
