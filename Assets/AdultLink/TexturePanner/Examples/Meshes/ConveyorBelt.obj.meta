@@ -5,12 +5,32 @@ ModelImporter:
   fileIDToRecycleName:
     100000: //RootNode
     100002: default
+    100004: Cube.001_Cube.000
+    100006: Cube.002
+    100008: Cube_Cube.001
+    100010: Cube.001_Cube.004
     400000: //RootNode
     400002: default
+    400004: Cube.001_Cube.000
+    400006: Cube.002
+    400008: Cube_Cube.001
+    400010: Cube.001_Cube.004
     2100000: defaultMat
     2300000: default
+    2300002: Cube.001_Cube.000
+    2300004: Cube.002
+    2300006: Cube_Cube.001
+    2300008: Cube.001_Cube.004
     3300000: default
+    3300002: Cube.001_Cube.000
+    3300004: Cube.002
+    3300006: Cube_Cube.001
+    3300008: Cube.001_Cube.004
     4300000: default
+    4300002: Cube.001_Cube.000
+    4300004: Cube.002
+    4300006: Cube_Cube.001
+    4300008: Cube.001_Cube.004
   externalObjects: {}
   materials:
     importMaterials: 0

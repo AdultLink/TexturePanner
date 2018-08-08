@@ -57,7 +57,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Tex:
-        m_Texture: {fileID: 2800000, guid: 9a6a697464b45ca4fa13327e7359e7a5, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2719a1189760e8f4ea4202e545e47a6e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample0:
@@ -154,13 +154,13 @@ Material:
     - __dirty: 0
     - _s: 0
     m_Colors:
-    - _Color: {r: 1, g: 0.7525354, b: 0.10294109, a: 1}
+    - _Color: {r: 0.9338235, g: 0.6767852, b: 0.1235943, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
     - _Scanlinespeed: {r: 0, g: -0.1, b: 0, a: 0}
     - _Scanlinestiling: {r: 1, g: 2, b: 0, a: 0}
     - _Scrollingspeed: {r: 0, g: 0, b: 0, a: 0}
     - _Scrollspeed: {r: 1, g: 0, b: 0, a: 0}
-    - _Tiling: {r: 1, g: 1, b: 0, a: 0}
+    - _Tiling: {r: 4, g: 1, b: 0, a: 0}
     - _Tintcolor: {r: 1.2940001, g: 0, b: 0, a: 1}
     - _Vector0: {r: 0.33, g: 0, b: 0, a: 0}

@@ -155,13 +155,13 @@ Material:
     - __dirty: 0
     - _s: 0
     m_Colors:
-    - _Color: {r: 1, g: 0.43448275, b: 0, a: 1}
+    - _Color: {r: 0.8897059, g: 0.45378083, b: 0.1177552, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
     - _Scanlinespeed: {r: 0, g: -0.1, b: 0, a: 0}
     - _Scanlinestiling: {r: 1, g: 2, b: 0, a: 0}
     - _Scrollingspeed: {r: 0, g: 0, b: 0, a: 0}
     - _Scrollspeed: {r: 1, g: 0, b: 0, a: 0}
-    - _Tiling: {r: 2, g: 1, b: 0, a: 0}
+    - _Tiling: {r: 4, g: 6, b: 0, a: 0}
     - _Tintcolor: {r: 1.2940001, g: 0, b: 0, a: 1}
     - _Vector0: {r: 0.33, g: 0, b: 0, a: 0}
