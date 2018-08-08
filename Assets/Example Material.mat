@@ -6,14 +6,12 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: TexturePanner_mat15
+  m_Name: Example Material
   m_Shader: {fileID: 4800000, guid: 4d846dee7d5e44743a993157b1b14b43, type: 3}
-  m_ShaderKeywords: _COLORMODE_MULTIPLY _EMISSION _GLOBALEMISSIONFLICKER_ON _NOTRANSPARENCY_ON
-    _OFFSETSCROLL_SCROLL _SCROLLING_ON _SCROLLOFFSET_OFFSET _SCROLLOFFSET_ON _SHARPX_ON
-    _SHARPY_ON _SHARPZ_ON _S_OFFSET _TINTTEXTURE_DONTTINT _TINTTEXTURE_MULTIPLY _TINTTEXTURE_ON
-    _VERTICALSTRETCH_ON
+  m_ShaderKeywords: _COLORMODE_MULTIPLY _SCROLLROTATE_SCROLL _SHARPX_ON _SHARPY_ON
+    _SHARPZ_ON
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 1
+  m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -58,11 +56,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Tex:
-        m_Texture: {fileID: 2800000, guid: 557daface942b52408b29ce5417bab9e, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _TextureSample0:
-        m_Texture: {fileID: 2800000, guid: 0175c839c16f2d446b39b55bc0c2cee1, type: 3}
+        m_Texture: {fileID: 2800000, guid: 401b139f4adac8b4e8443cc06789537c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
@@ -75,15 +69,9 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Float0: -2.46
-    - _Float1: 50
-    - _Float2: -5
-    - _Float3: 6.78
-    - _Float7: 6.78
-    - _Float8: -2.46
-    - _Globalemissionflicker: 1
-    - _Globalemissionflickeramplitude: 2
-    - _Globalemissionflickerfreq: 5
+    - _Globalemissionflicker: 0
+    - _Globalemissionflickeramplitude: 0.5
+    - _Globalemissionflickerfreq: 1
     - _Globalemissionflickeroffset: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -99,68 +87,41 @@ Material:
     - _Horizontalstretchpivotpoint: 0
     - _Metallic: 0
     - _Mode: 0
-    - _Notransparency: 1
     - _OcclusionStrength: 1
-    - _OffsetScroll: 1
     - _Parallax: 0.02
     - _RotationSpeed: 1
-    - _Scale1: 200
-    - _Scale2: 200
-    - _Scanlines: 0
     - _ScanlinesX: 0
     - _ScanlinesY: 0
-    - _ScanlinesYThreshold: 0
     - _ScanlinesZ: 0
-    - _Scanlinesscale: 100
-    - _ScanlinesscaleX: 500
-    - _ScanlinesscaleY: 500
-    - _ScanlinesscaleZ: 4
-    - _Scanlinessmoothing: 19.1
-    - _Scanlinesspeed: -5
-    - _ScanlinesspeedX: 5
-    - _ScanlinesspeedY: 0
+    - _ScanlinesscaleX: 30
+    - _ScanlinesscaleY: 30
+    - _ScanlinesscaleZ: 30
+    - _ScanlinesspeedX: -5
+    - _ScanlinesspeedY: -5
     - _ScanlinesspeedZ: -5
-    - _ScrollOffset: 1
-    - _Scrolling: 1
-    - _ScrollingspeedX: 2
+    - _ScrollingspeedX: -1
     - _ScrollingspeedY: 0
-    - _Scrolloffset: 1
     - _Scrollrotate: 0
-    - _Sharp: 0
     - _SharpX: 1
     - _SharpY: 1
     - _SharpZ: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _Speed1: -5
-    - _Speed2: -5
     - _SrcBlend: 1
-    - _Tinttexture: 1
     - _UVSec: 0
-    - _Verticalamplitude: 0.026
-    - _Verticalfreq: 10
     - _Verticalmovement: 0
-    - _Verticalmovementamplitude: 0.05
+    - _Verticalmovementamplitude: 0.5
     - _Verticalmovementfreq: 1
     - _Verticalmovementoffset: 0
-    - _Verticaloffset: 0
-    - _Verticalphase: 88888
-    - _Verticalstretch: 1
-    - _Verticalstretchamplitude: 0.2
-    - _Verticalstretchfreq: 10
+    - _Verticalstretch: 0
+    - _Verticalstretchamplitude: 0.5
+    - _Verticalstretchfreq: 0.5
     - _Verticalstretchoffset: 0
-    - _Verticalstretchpivotpoint: -1
+    - _Verticalstretchpivotpoint: 0
     - _ZWrite: 1
-    - __dirty: 0
-    - _s: 0
+    - __dirty: 1
     m_Colors:
-    - _Color: {r: 0.9914496, g: 0.27035293, b: 1.149, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
-    - _Scanlinespeed: {r: 0, g: -0.1, b: 0, a: 0}
-    - _Scanlinestiling: {r: 1, g: 2, b: 0, a: 0}
-    - _Scrollingspeed: {r: 0, g: 0, b: 0, a: 0}
-    - _Scrollspeed: {r: 1, g: 0, b: 0, a: 0}
     - _Tiling: {r: 1, g: 1, b: 0, a: 0}
-    - _Tintcolor: {r: 1.2940001, g: 0, b: 0, a: 1}
-    - _Vector0: {r: 0.33, g: 0, b: 0, a: 0}

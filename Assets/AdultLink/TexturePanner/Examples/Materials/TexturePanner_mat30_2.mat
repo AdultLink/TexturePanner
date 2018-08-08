@@ -8,9 +8,10 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: TexturePanner_mat30_2
   m_Shader: {fileID: 4800000, guid: 4d846dee7d5e44743a993157b1b14b43, type: 3}
-  m_ShaderKeywords: _COLORMODE_MULTIPLY _NOTRANSPARENCY_ON _OFFSETSCROLL_SCROLL _SCROLLOFFSET_OFFSET
-    _SCROLLOFFSET_ON _SCROLLROTATE_ROTATE _SHARPX_ON _SHARPY_ON _SHARPZ_ON _S_OFFSET
-    _TINTTEXTURE_DONTTINT _TINTTEXTURE_MULTIPLY _TINTTEXTURE_ON
+  m_ShaderKeywords: _COLORMODE_MULTIPLY _HORIZONTALMOVEMENT_ON _NOTRANSPARENCY_ON
+    _OFFSETSCROLL_SCROLL _SCROLLOFFSET_OFFSET _SCROLLOFFSET_ON _SCROLLROTATE_ROTATE
+    _SHARPX_ON _SHARPY_ON _SHARPZ_ON _S_OFFSET _TINTTEXTURE_DONTTINT _TINTTEXTURE_MULTIPLY
+    _TINTTEXTURE_ON _VERTICALMOVEMENT_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -87,6 +88,15 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _Horizontalmovement: 1
+    - _Horizontalmovementamplitude: 0.05
+    - _Horizontalmovementfreq: 2.5
+    - _Horizontalmovementoffset: 0
+    - _Horizontalstretch: 0
+    - _Horizontalstretchamplitude: 0.5
+    - _Horizontalstretchfreq: 0.5
+    - _Horizontalstretchoffset: 0
+    - _Horizontalstretchpivotpoint: 0
     - _Metallic: 0
     - _Mode: 0
     - _Notransparency: 1
@@ -130,9 +140,9 @@ Material:
     - _UVSec: 0
     - _Verticalamplitude: 0.026
     - _Verticalfreq: 10
-    - _Verticalmovement: 0
-    - _Verticalmovementamplitude: 1
-    - _Verticalmovementfreq: 0.8
+    - _Verticalmovement: 1
+    - _Verticalmovementamplitude: 0.05
+    - _Verticalmovementfreq: 5
     - _Verticalmovementoffset: 0
     - _Verticaloffset: 0
     - _Verticalphase: 88888

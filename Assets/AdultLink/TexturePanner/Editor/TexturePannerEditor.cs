@@ -98,7 +98,7 @@ public class TexturePannerEditor : ShaderGUI
 		if (ShowGeneralSettings){
 			DrawMainSettings();
 		}
-		ShowScrollingSettings = EditorGUILayout.Foldout(ShowScrollingSettings, "Scrolling/Rotating", foldoutStyle);
+		ShowScrollingSettings = EditorGUILayout.Foldout(ShowScrollingSettings, "Scrolling/Rotation", foldoutStyle);
 		if (ShowScrollingSettings){
 			DrawScrollingSettings();
 		}
