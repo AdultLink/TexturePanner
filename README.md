@@ -26,9 +26,7 @@ The setup for this shader is minimal, all you need to do is create a new materia
 
 ![BasicExample](Screenshots/BasicExample.gif)
 
-When using textures that allow transparency (.png for instance), this information is taken into consideration:
-
-![BasicExample2](Screenshots/BasicExample2.gif)
+When using textures that allow transparency (.png for instance), this information is taken into consideration.
 
 ## Using your own meshes
 
