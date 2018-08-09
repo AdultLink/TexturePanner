@@ -24,7 +24,9 @@ Project developed using **Unity 2017.4.8f1**. Please use this version if you are
 ## Getting started
 The setup for this shader is minimal, all you need to do is create a new material and assign a base texture, which will be scrolled over the UVs. Assign this new material to a quad and there we go, we now have a scrolling texture:
 
-![BasicExample](Screenshots/BasicExample.gif)
+<p align="center">
+  <img src="https://github.com/AdultLink/TexturePanner/blob/master/Screenshots/BasicExample.gif" title="BasicExample">
+</p>
 
 When using textures that allow transparency (.png for instance), this information is taken into consideration.
 
@@ -34,14 +36,18 @@ A series of meshes ready to use are included within this repository, but dependi
 
 If we use the default cube mesh in Unity as our mesh, the texture we chose will scroll over every face:
 
-![BasicExample3](Screenshots/BasicExample3.gif)
+<p align="center">
+  <img src="https://github.com/AdultLink/TexturePanner/blob/master/Screenshots/BasicExample3.gif" title="BasicExample3">
+</p>
 
 Furthermore, we can see both side faces are going against each other, thus breaking the scrolling effect. We need to lay out the UVs of our mesh in a way that allows for easy scrolling. For instance, if our goal is to make the arrows loop through the side faces of the cube, we need to get rid of the top and bottom faces, and orient all the side faces in the same direction.
 
 It is recommended to layout all the faces inside the UV square for cleaner results. This means our texture will stretch across all the faces, which me may not want, but we can always tile it in the inspector:
 
 ![BlenderCubeUVs](Screenshots/BlenderCubeUVs.gif)
-![BlenderCubeExample](Screenshots/BlenderCubeExample.gif)
+<p align="center">
+  <img src="https://github.com/AdultLink/TexturePanner/blob/master/Screenshots/BlenderCubeExample.gif" title="BasicExample">
+</p>
 
 # Usage, parameters
 
