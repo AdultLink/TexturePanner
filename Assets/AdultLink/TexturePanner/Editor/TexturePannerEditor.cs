@@ -266,9 +266,9 @@ public class TexturePannerEditor : ShaderGUI
 			EditorGUI.indentLevel++;
 			_materialEditor.ShaderProperty(_Verticalstretch, "Enable");
 			_materialEditor.ShaderProperty(_Verticalstretchamplitude, "Amplitude");
+			_materialEditor.ShaderProperty(_Verticalstretchoffset, "Amplitude offset");
 			_materialEditor.ShaderProperty(_Verticalstretchfreq, "Frequency");
-			_materialEditor.ShaderProperty(_Verticalstretchpivotpoint, "Point of origin offset");
-			_materialEditor.ShaderProperty(_Verticalstretchoffset, "Offset");
+			_materialEditor.ShaderProperty(_Verticalstretchpivotpoint, "Origin offset");
 			EditorGUI.indentLevel--;
 		}
 		ShowHorizontalStretchSettings = EditorGUILayout.Foldout(ShowHorizontalStretchSettings, "Horizontal stretching", foldoutStyle);
@@ -276,9 +276,9 @@ public class TexturePannerEditor : ShaderGUI
 			EditorGUI.indentLevel++;
 			_materialEditor.ShaderProperty(_Horizontalstretch, "Enable");
 			_materialEditor.ShaderProperty(_Horizontalstretchamplitude, "Amplitude");
+			_materialEditor.ShaderProperty(_Horizontalstretchoffset, "Amplitude offset");
 			_materialEditor.ShaderProperty(_Horizontalstretchfreq, "Frequency");
-			_materialEditor.ShaderProperty(_Horizontalstretchpivotpoint, "Point of origin offset");
-			_materialEditor.ShaderProperty(_Horizontalstretchoffset, "Offset");
+			_materialEditor.ShaderProperty(_Horizontalstretchpivotpoint, "Origin offset");
 			EditorGUI.indentLevel--;
 		}
 		EditorGUI.indentLevel--;
@@ -295,7 +295,7 @@ public class TexturePannerEditor : ShaderGUI
 			_materialEditor.ShaderProperty(_Verticalmovement, "Enable");
 			_materialEditor.ShaderProperty(_Verticalmovementamplitude, "Amplitude");
 			_materialEditor.ShaderProperty(_Verticalmovementfreq, "Frequency");
-			_materialEditor.ShaderProperty(_Verticalmovementoffset, "Point of origin offset");
+			_materialEditor.ShaderProperty(_Verticalmovementoffset, "Origin offset");
 			EditorGUI.indentLevel--;
 		}
 		ShowHorizontalDisplacementSettings = EditorGUILayout.Foldout(ShowHorizontalDisplacementSettings, "Horizontal displacement", foldoutStyle);
@@ -305,7 +305,7 @@ public class TexturePannerEditor : ShaderGUI
 			_materialEditor.ShaderProperty(_Horizontalmovement, "Enable");
 			_materialEditor.ShaderProperty(_Horizontalmovementamplitude, "Amplitude");
 			_materialEditor.ShaderProperty(_Horizontalmovementfreq, "Frequency");
-			_materialEditor.ShaderProperty(_Horizontalmovementoffset, "Point of origin offset");
+			_materialEditor.ShaderProperty(_Horizontalmovementoffset, "Origin offset");
 			EditorGUI.indentLevel--;
 		}
 		EditorGUI.indentLevel--;

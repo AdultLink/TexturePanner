@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: MarqueeBG2
   m_Shader: {fileID: 4800000, guid: 4d846dee7d5e44743a993157b1b14b43, type: 3}
-  m_ShaderKeywords: _COLORMODE_ORIGINAL _GLOBALEMISSIONFLICKER_ON _SCROLLROTATE_NONE
+  m_ShaderKeywords: _COLORMODE_ORIGINAL _GLOBALEMISSIONFLICKER_ON _SCROLLROTATE_SCROLL
     _SHARPX_ON _SHARPY_ON _SHARPZ_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -76,6 +76,15 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _Horizontalmovement: 0
+    - _Horizontalmovementamplitude: 0.5
+    - _Horizontalmovementfreq: 1
+    - _Horizontalmovementoffset: 0
+    - _Horizontalstretch: 0
+    - _Horizontalstretchamplitude: 0.5
+    - _Horizontalstretchfreq: 0.5
+    - _Horizontalstretchoffset: 0
+    - _Horizontalstretchpivotpoint: 0
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -90,9 +99,9 @@ Material:
     - _ScanlinesspeedX: -5
     - _ScanlinesspeedY: -5
     - _ScanlinesspeedZ: -5
-    - _ScrollingspeedX: -1
+    - _ScrollingspeedX: 0.1
     - _ScrollingspeedY: 0
-    - _Scrollrotate: 2
+    - _Scrollrotate: 0
     - _SharpX: 1
     - _SharpY: 1
     - _SharpZ: 1

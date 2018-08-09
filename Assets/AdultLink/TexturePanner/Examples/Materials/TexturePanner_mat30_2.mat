@@ -11,7 +11,7 @@ Material:
   m_ShaderKeywords: _COLORMODE_MULTIPLY _HORIZONTALMOVEMENT_ON _NOTRANSPARENCY_ON
     _OFFSETSCROLL_SCROLL _SCROLLOFFSET_OFFSET _SCROLLOFFSET_ON _SCROLLROTATE_ROTATE
     _SHARPX_ON _SHARPY_ON _SHARPZ_ON _S_OFFSET _TINTTEXTURE_DONTTINT _TINTTEXTURE_MULTIPLY
-    _TINTTEXTURE_ON _VERTICALMOVEMENT_ON
+    _TINTTEXTURE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -89,14 +89,14 @@ Material:
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Horizontalmovement: 1
-    - _Horizontalmovementamplitude: 0.05
+    - _Horizontalmovementamplitude: 0.04
     - _Horizontalmovementfreq: 2.5
     - _Horizontalmovementoffset: 0
     - _Horizontalstretch: 0
-    - _Horizontalstretchamplitude: 0.5
-    - _Horizontalstretchfreq: 0.5
+    - _Horizontalstretchamplitude: 1
+    - _Horizontalstretchfreq: 1
     - _Horizontalstretchoffset: 0
-    - _Horizontalstretchpivotpoint: 0
+    - _Horizontalstretchpivotpoint: -1
     - _Metallic: 0
     - _Mode: 0
     - _Notransparency: 1
@@ -140,17 +140,17 @@ Material:
     - _UVSec: 0
     - _Verticalamplitude: 0.026
     - _Verticalfreq: 10
-    - _Verticalmovement: 1
-    - _Verticalmovementamplitude: 0.05
+    - _Verticalmovement: 0
+    - _Verticalmovementamplitude: 2
     - _Verticalmovementfreq: 5
     - _Verticalmovementoffset: 0
     - _Verticaloffset: 0
     - _Verticalphase: 88888
     - _Verticalstretch: 0
-    - _Verticalstretchamplitude: 0.05
+    - _Verticalstretchamplitude: 1
     - _Verticalstretchfreq: 1
-    - _Verticalstretchoffset: 0
-    - _Verticalstretchpivotpoint: 0
+    - _Verticalstretchoffset: 1
+    - _Verticalstretchpivotpoint: -0.72
     - _ZWrite: 1
     - __dirty: 0
     - _s: 0
@@ -162,6 +162,6 @@ Material:
     - _Scanlinestiling: {r: 1, g: 2, b: 0, a: 0}
     - _Scrollingspeed: {r: 0, g: 0, b: 0, a: 0}
     - _Scrollspeed: {r: 1, g: 0, b: 0, a: 0}
-    - _Tiling: {r: 1, g: 1, b: 0, a: 0}
+    - _Tiling: {r: 1, g: 1, b: 1, a: 0}
     - _Tintcolor: {r: 1.2940001, g: 0, b: 0, a: 1}
     - _Vector0: {r: 0.33, g: 0, b: 0, a: 0}
