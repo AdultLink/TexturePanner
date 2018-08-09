@@ -3,9 +3,11 @@
 
 This shader is a glorified texture panner, with a few extra features oriented towards adding variety. By getting creative with mesh geometry and textures, we can achieve a wide range of results.
 
-It can be modified through [Amplify Shader Editor](http://amplify.pt/unity/amplify-shader-editor) and contributions to the project are always welcome!
+It can be edited through [Amplify Shader Editor](http://amplify.pt/unity/amplify-shader-editor) and contributions to the project are always welcome!
 
 Project developed using **Unity 2017.4.8f1**. Please use this version if you are planning on contributing.
+
+_(Beware: The screenshots folder is quite heavy at the moment, I need to find a way to reduce file size for gifs without losing too much quality)_
 
 # Table of contents
 1. [Setup](#setup)
@@ -60,15 +62,40 @@ This shader is comprised of a few "modules", that work independently and can be 
 ## General settings
 
 Texture tiling, offset and color mixing fall under this category. Color mixing offers a few options:
-- Original: The original color of the texture is respected, no action is taken.
-- Hueshift: The hue of the texture is shifted by the hue value of the selected color.
-- Multiply: Direct multiplication of both colors.
-- Replace: Gives a new color to the whole texture.
+- `Original`: The original color of the texture is respected, no action is taken.
+- `Hueshift`: The hue value of the texture is shifted by the hue value of the selected color.
+- `Multiply`: Direct multiplication of both colors.
+- `Replace`: Gives a new color to the whole texture.
+
+![ColorMixing](Screenshots/ColorMixing.gif)
 
 ## Scrolling/Rotation
+
+This module is the core of this shader. It allows you to **scroll** the texture in both axes, with independent speed values.
+
+![Scrolling](Screenshots/Scrolling.gif)
+
+As an alternative, it is also possible to **rotate** the texture instead of scrolling it. In this case, it is advised to set the texture's wrap mode to `Clamp` instead of `Repeat`, otherwise, copies of the texture will sometimes bleed in through corners.
+
+![Rotation](Screenshots/Rotation.gif)
+
+It is also possible to disable both of these modes. This is useful in case we just want some scanlines scrolling through a static texture.
+
+![Scanlines1](Screenshots/Scanlines1.gif)
+
 ## Scanlines
+
+Allows you to simulate transparent scanlines looping through the texture. By ticking/unticking the `Sharp` option, we can get a slightly different look.
+
+![Scanlines2](Screenshots/Scanlines2.gif)
+
 ## Stretching
+
+By manipulating the vertices of the mesh we can make it stretch along the horizontal and the vertical axes. `Amplitude offset` comes in handy if you don't want the texture to ever reach a value of 0, and the `Origin offset` parameter allows you to offset the anchor point for the stretching.
+
 ## Displacement
+
+Very similar to the previous concept, it allows for a displacement of the whole mesh.
 
 # Examples
 
