@@ -77,8 +77,6 @@ This module is the core of this shader. It allows you to **scroll** the texture 
 
 As an alternative, it is also possible to **rotate** the texture instead of scrolling it. In this case, it is advised to set the texture's wrap mode to `Clamp` instead of `Repeat`, otherwise, copies of the texture will sometimes bleed in through corners.
 
-![Rotation](Screenshots/Rotation.gif)
-
 It is also possible to disable both of these modes. This is useful in case we just want some scanlines scrolling through a static texture.
 
 ![Scanlines1](Screenshots/Scanlines1.gif)
