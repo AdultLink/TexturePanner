@@ -53,8 +53,6 @@ It is recommended to layout all the faces inside the UV square for cleaner resul
 
 # Usage, parameters
 
-**WIP**
-
 This shader is comprised of a few "modules", that work independently and can be activated/deactivated without affecting each other.
 
 ![Parameters](Screenshots/Parameters.png)
@@ -96,6 +94,7 @@ By manipulating the vertices of the mesh we can make it stretch along the horizo
 ## Displacement
 
 Very similar to the previous concept, it allows for a displacement of the whole mesh.
+
 ![Displacement](Screenshots/Displacement.gif)
 
 # Examples
