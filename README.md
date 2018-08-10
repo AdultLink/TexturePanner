@@ -91,9 +91,12 @@ Allows you to simulate transparent scanlines looping through the texture. By tic
 
 By manipulating the vertices of the mesh we can make it stretch along the horizontal and the vertical axes. `Amplitude offset` comes in handy if you don't want the texture to ever reach a value of 0, and the `Origin offset` parameter allows you to offset the anchor point for the stretching.
 
+![Stretching](Screenshots/Stretching.gif)
+
 ## Displacement
 
 Very similar to the previous concept, it allows for a displacement of the whole mesh.
+![Displacement](Screenshots/Displacement.gif)
 
 # Examples
 
