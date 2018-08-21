@@ -13,6 +13,8 @@ Project developed using **Unity 2017.4.8f1**. Please use this version if you are
 
 _(Beware: The screenshots folder is quite heavy at the moment, I need to find a way to reduce file size for gifs without losing too much quality)_
 
+You can also just download a **unitypackage** from the releases tab and easily import everything to your project. This will not download the _screenshots_ folder.
+
 # Table of contents
 1. [Setup](#setup)
    - 1.1 [Getting started](#getting-started)
