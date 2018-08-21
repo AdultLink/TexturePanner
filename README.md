@@ -15,12 +15,14 @@ _(Beware: The screenshots folder is quite heavy at the moment, I need to find a 
    - 1.2 [Using your own meshes](#using-your-own-meshes)
 2. [Usage & parameters](#usage-parameters)
    - 2.1 [General settings](#general-settings)
-   - 2.2 [Scrolling & rotation](#scrollingrotation)
-   - 2.3 [Scanlines](#scanlines)
-   - 2.4 [Stretching](#stretching)
-   - 2.5 [Displacement](#displacement)
+   - 2.2 [Emission](#emission)
+   - 2.3 [Scrolling & rotation](#scrollingrotation)
+   - 2.4 [Scanlines](#scanlines)
+   - 2.5 [Stretching](#stretching)
+   - 2.6 [Displacement](#displacement)
 3. [Examples](#examples)
-4. [License](#license)
+4. [Donate](#donate)
+5. [License](#license)
 
 # Setup
 ## Getting started
@@ -66,6 +68,12 @@ Texture tiling, offset and color mixing fall under this category. Color mixing o
 - `Replace`: Gives a new color to the whole texture.
 
 ![ColorMixing](Screenshots/ColorMixing.gif)
+
+## Emission
+
+This allows you to pulse the `Emission value` of the color, by specifying an amplitude and a frequency. By tweaking the offset value  we can also make it fade into transparency.
+
+![Emission](Screenshots/Emission.gif)
 
 ## Scrolling/Rotation
 
@@ -127,6 +135,14 @@ Imagination is the limit!
 
 Experiment with new geometries and effect combinations. Sometimes the most fun outcomes are the result of just toying around!
 
+# Donate [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/adultlink/5usd)
+
+This piece of software is offered for free because I believe the gamedev community can benefit from it, and it should not be behind a paywall. I learned from the community, and now I am giving back.
+
+If you would like to support me, donations are very much appreciated, since they help me create more software that I can offer for free.
+
+Thank you very much :)
+
 # License
 MIT License
 
@@ -149,3 +165,5 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
