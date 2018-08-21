@@ -5,7 +5,11 @@ This shader is a glorified texture panner, with a few extra features oriented to
 
 It can be edited through [Amplify Shader Editor](http://amplify.pt/unity/amplify-shader-editor) and contributions to the project are always welcome!
 
-Project developed using **Unity 2017.4.8f1**. Please use this version if you are planning on contributing.
+---
+
+Project developed using **Unity 2017.4.8f1**. Please use this version if you are planning on contributing. You can work on your own branch and send a pull request with your changes.
+
+---
 
 _(Beware: The screenshots folder is quite heavy at the moment, I need to find a way to reduce file size for gifs without losing too much quality)_
 
