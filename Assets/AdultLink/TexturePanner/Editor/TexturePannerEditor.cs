@@ -79,45 +79,77 @@ public class TexturePannerEditor : ShaderGUI
 	protected static bool ShowDisplacementSettings = true;
 	protected static bool ShowVerticalDisplacementSettings = true;
 	protected static bool ShowHorizontalDisplacementSettings = true;
-	GUIStyle foldoutStyle = new GUIStyle(EditorStyles.foldout);
+	//GUIStyle foldoutStyle = new GUIStyle(EditorStyles.foldout);
 
 	public override void OnGUI(MaterialEditor materialEditor, MaterialProperty[] properties)
     {
 		_properties = properties;
 		_materialEditor = materialEditor;
+		EditorGUI.BeginChangeCheck();
 		DrawGUI();
 	}
 
-	void InitializeFoldoutStyle() {
- 		foldoutStyle.fontStyle = FontStyle.Bold;
-	}
+	//void InitializeFoldoutStyle() {
+ 		//foldoutStyle.fontStyle = FontStyle.Bold;
+	//}
 	void DrawGUI() {
-		InitializeFoldoutStyle();
+		//InitializeFoldoutStyle();
 		GetProperties();
-		ShowGeneralSettings = EditorGUILayout.Foldout(ShowGeneralSettings, "General settings", foldoutStyle);
+		DrawBanner();
+
+		EditorGUILayout.BeginVertical(EditorStyles.helpBox);
+		EditorGUI.indentLevel++;
+		ShowGeneralSettings = EditorGUILayout.Foldout(ShowGeneralSettings, "General settings");
 		if (ShowGeneralSettings){
 			DrawMainSettings();
 		}
-		ShowScrollingSettings = EditorGUILayout.Foldout(ShowScrollingSettings, "Scrolling/Rotation", foldoutStyle);
+		EditorGUI.indentLevel--;
+		EditorGUILayout.EndVertical();
+
+		EditorGUILayout.BeginVertical(EditorStyles.helpBox);
+		EditorGUI.indentLevel++;
+		ShowScrollingSettings = EditorGUILayout.Foldout(ShowScrollingSettings, "Scrolling/Rotation");
 		if (ShowScrollingSettings){
 			DrawScrollingSettings();
 		}
-		ShowEmissionSettings = EditorGUILayout.Foldout(ShowEmissionSettings, "Emission pulsation", foldoutStyle);
+		EditorGUI.indentLevel--;
+		EditorGUILayout.EndVertical();
+
+		EditorGUILayout.BeginVertical(EditorStyles.helpBox);
+		EditorGUI.indentLevel++;
+		ShowEmissionSettings = EditorGUILayout.Foldout(ShowEmissionSettings, "Emission pulsation");
 		if (ShowEmissionSettings){
 			DrawEmissionSettings();
 		}
-		ShowScanlinesSettings = EditorGUILayout.Foldout(ShowScanlinesSettings, "Scanlines", foldoutStyle);
+		EditorGUI.indentLevel--;
+		EditorGUILayout.EndVertical();
+
+		EditorGUILayout.BeginVertical(EditorStyles.helpBox);
+		EditorGUI.indentLevel++;
+		ShowScanlinesSettings = EditorGUILayout.Foldout(ShowScanlinesSettings, "Scanlines");
 		if (ShowScanlinesSettings){
 			DrawScanlinesSettings();
 		}
-		ShowStretchSettings = EditorGUILayout.Foldout(ShowStretchSettings, "Stretching", foldoutStyle);
+		EditorGUI.indentLevel--;
+		EditorGUILayout.EndVertical();
+
+		EditorGUILayout.BeginVertical(EditorStyles.helpBox);
+		EditorGUI.indentLevel++;
+		ShowStretchSettings = EditorGUILayout.Foldout(ShowStretchSettings, "Stretching");
 		if (ShowStretchSettings){
 			DrawStretchSettings();
 		}
-		ShowDisplacementSettings = EditorGUILayout.Foldout(ShowDisplacementSettings, "Displacement", foldoutStyle);
+		EditorGUI.indentLevel--;
+		EditorGUILayout.EndVertical();
+
+		EditorGUILayout.BeginVertical(EditorStyles.helpBox);
+		EditorGUI.indentLevel++;
+		ShowDisplacementSettings = EditorGUILayout.Foldout(ShowDisplacementSettings, "Displacement");
 		if (ShowDisplacementSettings){
 			DrawDisplacementSettings();
 		}
+		EditorGUI.indentLevel--;
+		EditorGUILayout.EndVertical();
     }
 
 	void GetProperties() {
@@ -179,134 +211,145 @@ public class TexturePannerEditor : ShaderGUI
 		_Horizontalmovementoffset = FindProperty("_Horizontalmovementoffset", _properties);
 	}
 
+	static Texture2D bannerTexture = null;
+    static GUIStyle title = null;
+    static GUIStyle linkStyle = null;
+    static string repoURL = "https://github.com/adultlink/texturepanner";
+
+	void DrawBanner()
+    {
+        if (bannerTexture == null)
+            bannerTexture = Resources.Load<Texture2D>("TexturePannerBanner");
+
+        if (title == null)
+        {
+            title = new GUIStyle();
+            title.fontSize = 20;
+            title.alignment = TextAnchor.MiddleCenter;
+            title.normal.textColor = new Color(1f, 1f, 1f);
+        }
+		
+
+        if (linkStyle == null) linkStyle = new GUIStyle();
+
+        if (bannerTexture != null)
+        {
+            GUILayout.Space(4);
+            var rect = GUILayoutUtility.GetRect(0, int.MaxValue, 60, 60);
+            EditorGUI.DrawPreviewTexture(rect, bannerTexture, null, ScaleMode.ScaleAndCrop);
+            //
+            EditorGUI.LabelField(rect, "Texture Panner", title);
+
+            if (GUI.Button(rect, "", linkStyle)) {
+                Application.OpenURL(repoURL);
+            }
+            GUILayout.Space(4);
+        }
+    }
+
 	void DrawMainSettings() {
 		//MAIN SETTINGS
-		GUILayout.Space(-3);
-        EditorGUI.indentLevel++;
 		_materialEditor.SetDefaultGUIWidths();
 		_materialEditor.ShaderProperty(_Tex, "Texture");
 		_materialEditor.ShaderProperty(_Tiling, _Tiling.displayName);
 		_materialEditor.ShaderProperty(_Offset, _Offset.displayName);
 		_materialEditor.ShaderProperty(_Color, _Color.displayName);
 		_materialEditor.ShaderProperty(_Colormode, _Colormode.displayName);
-		EditorGUI.indentLevel--;
 	}
 
 	void DrawScanlinesSettings() {
 		//SCANLINES
-		GUILayout.Space(-3);
         EditorGUI.indentLevel++;
 		_materialEditor.SetDefaultGUIWidths();
-		//X
-		ShowScanlinesXSettings = EditorGUILayout.Foldout(ShowScanlinesXSettings, "Scanlines X", foldoutStyle);
+		
+		ShowScanlinesXSettings = EditorGUILayout.Foldout(ShowScanlinesXSettings, "Scanlines X");
 		if (ShowScanlinesXSettings){
-			EditorGUI.indentLevel++;
 			_materialEditor.ShaderProperty(_ScanlinesX, "Enable");
 			_materialEditor.ShaderProperty(_ScanlinesscaleX, "Scale");
 			_materialEditor.ShaderProperty(_ScanlinesspeedX, "Speed");
 			_materialEditor.ShaderProperty(_SharpX, "Sharp");
-			EditorGUI.indentLevel--;
 		}
 		//Y
-		ShowScanlinesYSettings = EditorGUILayout.Foldout(ShowScanlinesYSettings, "Scanlines Y", foldoutStyle);
+		ShowScanlinesYSettings = EditorGUILayout.Foldout(ShowScanlinesYSettings, "Scanlines Y");
 		if (ShowScanlinesYSettings){
-			EditorGUI.indentLevel++;
 			_materialEditor.ShaderProperty(_ScanlinesY, "Enable");
 			_materialEditor.ShaderProperty(_ScanlinesscaleY, "Scale");
 			_materialEditor.ShaderProperty(_ScanlinesspeedY, "Speed");
 			_materialEditor.ShaderProperty(_SharpY, "Sharp");
-			EditorGUI.indentLevel--;
 			}
 		//Z
-		ShowScanlinesZSettings = EditorGUILayout.Foldout(ShowScanlinesZSettings, "Scanlines Z", foldoutStyle);
+		ShowScanlinesZSettings = EditorGUILayout.Foldout(ShowScanlinesZSettings, "Scanlines Z");
 		if (ShowScanlinesZSettings){
-			EditorGUI.indentLevel++;
 			_materialEditor.ShaderProperty(_ScanlinesZ, "Enable");
 			_materialEditor.ShaderProperty(_ScanlinesscaleZ, "Scale");
 			_materialEditor.ShaderProperty(_ScanlinesspeedZ, "Speed");
 			_materialEditor.ShaderProperty(_SharpZ, "Sharp");
-			EditorGUI.indentLevel--;
 			}
 		EditorGUI.indentLevel--;
 	}
 
 	void DrawEmissionSettings() {
 		//GLOBAL EMISSION
-		GUILayout.Space(-3);
-        EditorGUI.indentLevel++;
 		_materialEditor.SetDefaultGUIWidths();
 		_materialEditor.ShaderProperty(_Globalemissionflicker, "Enable");
 		_materialEditor.ShaderProperty(_Globalemissionflickeramplitude, "Amplitude");
 		_materialEditor.ShaderProperty(_Globalemissionflickerfreq, "Frequency");
 		_materialEditor.ShaderProperty(_Globalemissionflickeroffset, "Offset");
-		EditorGUI.indentLevel--;
 	}
 
 	void DrawScrollingSettings() {
 		
 		//SCROLLING
-		GUILayout.Space(-3);
-        EditorGUI.indentLevel++;
+		
 		_materialEditor.SetDefaultGUIWidths();
 		_materialEditor.ShaderProperty(_Scrollrotate, "Scroll/Rotate/None");
 		_materialEditor.ShaderProperty(_ScrollingspeedX, _ScrollingspeedX.displayName);
 		_materialEditor.ShaderProperty(_ScrollingspeedY, _ScrollingspeedY.displayName);
 		_materialEditor.ShaderProperty(_RotationSpeed, _RotationSpeed.displayName);
-		EditorGUI.indentLevel--;
 		}
 	
 
 	void DrawStretchSettings() {
 		//VERTICAL STRETCH
-		GUILayout.Space(-3);
         EditorGUI.indentLevel++;
 		_materialEditor.SetDefaultGUIWidths();
-		ShowVerticalStretchSettings = EditorGUILayout.Foldout(ShowVerticalStretchSettings, "Vertical stretching", foldoutStyle);
+		ShowVerticalStretchSettings = EditorGUILayout.Foldout(ShowVerticalStretchSettings, "Vertical stretching");
 		if (ShowVerticalStretchSettings){
-			EditorGUI.indentLevel++;
 			_materialEditor.ShaderProperty(_Verticalstretch, "Enable");
 			_materialEditor.ShaderProperty(_Verticalstretchamplitude, "Amplitude");
 			_materialEditor.ShaderProperty(_Verticalstretchoffset, "Amplitude offset");
 			_materialEditor.ShaderProperty(_Verticalstretchfreq, "Frequency");
 			_materialEditor.ShaderProperty(_Verticalstretchpivotpoint, "Origin offset");
-			EditorGUI.indentLevel--;
 		}
-		ShowHorizontalStretchSettings = EditorGUILayout.Foldout(ShowHorizontalStretchSettings, "Horizontal stretching", foldoutStyle);
+		ShowHorizontalStretchSettings = EditorGUILayout.Foldout(ShowHorizontalStretchSettings, "Horizontal stretching");
 		if (ShowHorizontalStretchSettings){
-			EditorGUI.indentLevel++;
 			_materialEditor.ShaderProperty(_Horizontalstretch, "Enable");
 			_materialEditor.ShaderProperty(_Horizontalstretchamplitude, "Amplitude");
 			_materialEditor.ShaderProperty(_Horizontalstretchoffset, "Amplitude offset");
 			_materialEditor.ShaderProperty(_Horizontalstretchfreq, "Frequency");
 			_materialEditor.ShaderProperty(_Horizontalstretchpivotpoint, "Origin offset");
-			EditorGUI.indentLevel--;
 		}
 		EditorGUI.indentLevel--;
 	}
 
 	void DrawDisplacementSettings() {
 		//VERTICAL MOVEMENT
-		GUILayout.Space(-3);
         EditorGUI.indentLevel++;
-		ShowVerticalDisplacementSettings = EditorGUILayout.Foldout(ShowVerticalDisplacementSettings, "Vertical displacement", foldoutStyle);
-		if (ShowVerticalStretchSettings){
-			EditorGUI.indentLevel++;
+		ShowVerticalDisplacementSettings = EditorGUILayout.Foldout(ShowVerticalDisplacementSettings, "Vertical displacement");
+		if (ShowVerticalDisplacementSettings){
 			_materialEditor.SetDefaultGUIWidths();
 			_materialEditor.ShaderProperty(_Verticalmovement, "Enable");
 			_materialEditor.ShaderProperty(_Verticalmovementamplitude, "Amplitude");
 			_materialEditor.ShaderProperty(_Verticalmovementfreq, "Frequency");
 			_materialEditor.ShaderProperty(_Verticalmovementoffset, "Origin offset");
-			EditorGUI.indentLevel--;
 		}
-		ShowHorizontalDisplacementSettings = EditorGUILayout.Foldout(ShowHorizontalDisplacementSettings, "Horizontal displacement", foldoutStyle);
-		if (ShowHorizontalStretchSettings){
-			EditorGUI.indentLevel++;
+		ShowHorizontalDisplacementSettings = EditorGUILayout.Foldout(ShowHorizontalDisplacementSettings, "Horizontal displacement");
+		if (ShowHorizontalDisplacementSettings){
 			_materialEditor.SetDefaultGUIWidths();
 			_materialEditor.ShaderProperty(_Horizontalmovement, "Enable");
 			_materialEditor.ShaderProperty(_Horizontalmovementamplitude, "Amplitude");
 			_materialEditor.ShaderProperty(_Horizontalmovementfreq, "Frequency");
 			_materialEditor.ShaderProperty(_Horizontalmovementoffset, "Origin offset");
-			EditorGUI.indentLevel--;
 		}
 		EditorGUI.indentLevel--;
 	}

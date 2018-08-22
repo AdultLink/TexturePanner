@@ -141,7 +141,7 @@ Material:
     - _Verticalamplitude: 0.026
     - _Verticalfreq: 10
     - _Verticalmovement: 0
-    - _Verticalmovementamplitude: 0.05
+    - _Verticalmovementamplitude: 0.5
     - _Verticalmovementfreq: 1
     - _Verticalmovementoffset: 0
     - _Verticaloffset: 0
