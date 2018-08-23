@@ -169,6 +169,6 @@ Material:
     - _Scanlinestiling: {r: 1, g: 2, b: 0, a: 0}
     - _Scrollingspeed: {r: 0, g: 0, b: 0, a: 0}
     - _Scrollspeed: {r: 1, g: 0, b: 0, a: 0}
-    - _Tiling: {r: 1, g: 4, b: 0, a: 0}
+    - _Tiling: {r: 1, g: 3, b: 0, a: 0}
     - _Tintcolor: {r: 1.2940001, g: 0, b: 0, a: 1}
     - _Vector0: {r: 0.33, g: 0, b: 0, a: 0}

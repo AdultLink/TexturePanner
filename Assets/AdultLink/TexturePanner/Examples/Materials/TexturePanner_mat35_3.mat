@@ -100,6 +100,7 @@ Material:
     - _Horizontalstretchfreq: 20
     - _Horizontalstretchoffset: 0.5
     - _Horizontalstretchpivotpoint: 0
+    - _Masktexturerotationspeed: 0
     - _Metallic: 0
     - _Mode: 0
     - _Notransparency: 1
