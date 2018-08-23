@@ -26,6 +26,7 @@ You can also just download a **unitypackage** from the releases tab and easily i
    - 2.4 [Scanlines](#scanlines)
    - 2.5 [Stretching](#stretching)
    - 2.6 [Displacement](#displacement)
+   - 2.7 [Texture Masking](#texture-masking)
 3. [Examples](#examples)
 4. [Donate](#donate)
 5. [License](#license)
@@ -110,6 +111,16 @@ By manipulating the vertices of the mesh we can make it stretch along the horizo
 Very similar to the previous concept, it allows for a displacement of the whole mesh.
 
 ![Displacement](Screenshots/Displacement.gif)
+
+## Texture Masking
+
+Texture masking gives you another level of customization, when active (there is a texture selected), we can use the main texture as a "fill" for this new masking texture, which will act as fake geomtry.
+
+This way, we can easily fake geometries with textures, and use the main texture as a pattern.
+
+This is an alternative way to use this shader.
+
+![TextureMasking](Screenshots/TextureMasking.gif)
 
 # Examples
 
