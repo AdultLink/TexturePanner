@@ -8,8 +8,9 @@ namespace AdultLink
 		// Use this for initialization
 
 		private Material mat;
-		public float speed = 5f;
-		public Color color;
+		public float speed = 0.1f;
+		public Color color = Color.red;
+		public float brightness = 1.2f;
 		void Start () {
 
 			mat = GetComponent<Renderer>().material;
@@ -31,7 +32,7 @@ namespace AdultLink
 				if (hue < 0f) {
 					hue = 1.0f;
 				}
-				color = Color.HSVToRGB(hue,sat,1.3f);
+				color = Color.HSVToRGB(hue,sat,brightness);
 		}
 	}
 }

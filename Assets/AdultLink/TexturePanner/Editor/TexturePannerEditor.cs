@@ -64,6 +64,10 @@ public class TexturePannerEditor : ShaderGUI
 	private MaterialProperty _Horizontalmovementfreq = null;
 	private MaterialProperty _Horizontalmovementoffset = null;
 
+	//TEXTURE MASKING
+	private MaterialProperty _MaskingTex = null;
+	private MaterialProperty _MaskTextureRotationSpeed = null;
+
 	//FOLDOUT BOOLS
 
 	protected static bool ShowGeneralSettings = true;
@@ -79,7 +83,8 @@ public class TexturePannerEditor : ShaderGUI
 	protected static bool ShowDisplacementSettings = true;
 	protected static bool ShowVerticalDisplacementSettings = true;
 	protected static bool ShowHorizontalDisplacementSettings = true;
-	//GUIStyle foldoutStyle = new GUIStyle(EditorStyles.foldout);
+	protected static bool ShowTextureMaskingSettings = true;
+	
 
 	public override void OnGUI(MaterialEditor materialEditor, MaterialProperty[] properties)
     {
@@ -150,6 +155,15 @@ public class TexturePannerEditor : ShaderGUI
 		}
 		EditorGUI.indentLevel--;
 		EditorGUILayout.EndVertical();
+
+		EditorGUILayout.BeginVertical(EditorStyles.helpBox);
+		EditorGUI.indentLevel++;
+		ShowTextureMaskingSettings = EditorGUILayout.Foldout(ShowTextureMaskingSettings, "Masking");
+		if (ShowTextureMaskingSettings){
+			DrawTextureMaskingSettings();
+		}
+		EditorGUI.indentLevel--;
+		EditorGUILayout.EndVertical();
     }
 
 	void GetProperties() {
@@ -160,11 +174,13 @@ public class TexturePannerEditor : ShaderGUI
 		_Tiling = FindProperty("_Tiling", _properties);
 		_Color = FindProperty("_Color", _properties);
 		_Colormode = FindProperty("_Colormode", _properties);
+
 		//SCROLLING/ROTATING
 		_Scrollrotate = FindProperty("_Scrollrotate", _properties);
 		_ScrollingspeedX = FindProperty("_ScrollingspeedX", _properties);
 		_ScrollingspeedY = FindProperty("_ScrollingspeedY", _properties);
 		_RotationSpeed = FindProperty("_RotationSpeed", _properties);
+
 		//SCANLINES
 		_ScanlinesX = FindProperty("_ScanlinesX", _properties);
 		_ScanlinesscaleX = FindProperty("_ScanlinesscaleX", _properties);
@@ -180,6 +196,7 @@ public class TexturePannerEditor : ShaderGUI
 		_ScanlinesscaleZ = FindProperty("_ScanlinesscaleZ", _properties);
 		_ScanlinesspeedZ = FindProperty("_ScanlinesspeedZ", _properties);
 		_SharpZ = FindProperty("_SharpZ", _properties);
+
 		//EMISSION
 		_Globalemissionflicker = FindProperty("_Globalemissionflicker", _properties);
 		_Globalemissionflickeramplitude = FindProperty("_Globalemissionflickeramplitude", _properties);
@@ -192,6 +209,7 @@ public class TexturePannerEditor : ShaderGUI
 		_Verticalstretchfreq = FindProperty("_Verticalstretchfreq", _properties);
 		_Verticalstretchoffset = FindProperty("_Verticalstretchoffset", _properties);
 		_Verticalstretchpivotpoint = FindProperty("_Verticalstretchpivotpoint", _properties);
+
 		//VERTICAL MOVEMENT
 		_Verticalmovement = FindProperty("_Verticalmovement", _properties);
 		_Verticalmovementamplitude = FindProperty("_Verticalmovementamplitude", _properties);
@@ -204,11 +222,16 @@ public class TexturePannerEditor : ShaderGUI
 		_Horizontalstretchfreq = FindProperty("_Horizontalstretchfreq", _properties);
 		_Horizontalstretchoffset = FindProperty("_Horizontalstretchoffset", _properties);
 		_Horizontalstretchpivotpoint = FindProperty("_Horizontalstretchpivotpoint", _properties);
+
 		//HORIZONTAL MOVEMENT
 		_Horizontalmovement = FindProperty("_Horizontalmovement", _properties);
 		_Horizontalmovementamplitude = FindProperty("_Horizontalmovementamplitude", _properties);
 		_Horizontalmovementfreq = FindProperty("_Horizontalmovementfreq", _properties);
 		_Horizontalmovementoffset = FindProperty("_Horizontalmovementoffset", _properties);
+
+		//MASKING
+		_MaskingTex = FindProperty("_Masktexture", _properties);
+		_MaskTextureRotationSpeed = FindProperty("_Masktexturerotationspeed", _properties);
 	}
 
 	static Texture2D bannerTexture = null;
@@ -353,7 +376,13 @@ public class TexturePannerEditor : ShaderGUI
 		}
 		EditorGUI.indentLevel--;
 	}
-    
 
+	void DrawTextureMaskingSettings() {
+		//TEXTURE MASKING
+        
+		_materialEditor.SetDefaultGUIWidths();
+		_materialEditor.ShaderProperty(_MaskingTex, "Masking texture");
+		_materialEditor.ShaderProperty(_MaskTextureRotationSpeed, "Rotation speed");
+	}
 	
 }

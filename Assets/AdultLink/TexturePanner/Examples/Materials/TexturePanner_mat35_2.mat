@@ -1,0 +1,172 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: TexturePanner_mat35_2
+  m_Shader: {fileID: 4800000, guid: 4d846dee7d5e44743a993157b1b14b43, type: 3}
+  m_ShaderKeywords: _COLORMODE_MULTIPLY _NOTRANSPARENCY_ON _OFFSETSCROLL_SCROLL _SCROLLOFFSET_OFFSET
+    _SCROLLOFFSET_ON _SCROLLROTATE_ROTATE _SHARPX_ON _SHARPY_ON _SHARPZ_ON _S_OFFSET
+    _TINTTEXTURE_DONTTINT _TINTTEXTURE_MULTIPLY _TINTTEXTURE_ON
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Masktexture:
+        m_Texture: {fileID: 2800000, guid: 03e8340a84c07ff44abd84f498e59f89, type: 3}
+        m_Scale: {x: 2, y: 2}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Tex:
+        m_Texture: {fileID: 2800000, guid: fe0d4c5508f384a4da491c7c50e48d16, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample0:
+        m_Texture: {fileID: 2800000, guid: 0175c839c16f2d446b39b55bc0c2cee1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BumpScale: 1
+    - _Colormode: 2
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _Float0: -2.46
+    - _Float1: 50
+    - _Float2: -5
+    - _Float3: 6.78
+    - _Float7: 6.78
+    - _Float8: -2.46
+    - _Globalemissionflicker: 0
+    - _Globalemissionflickeramplitude: 1
+    - _Globalemissionflickerfreq: 5
+    - _Globalemissionflickeroffset: 1
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Horizontalmovement: 0
+    - _Horizontalmovementamplitude: 0.2
+    - _Horizontalmovementfreq: 10
+    - _Horizontalmovementoffset: 0
+    - _Horizontalstretch: 0
+    - _Horizontalstretchamplitude: 0.5
+    - _Horizontalstretchfreq: 20
+    - _Horizontalstretchoffset: 0.5
+    - _Horizontalstretchpivotpoint: 0
+    - _Metallic: 0
+    - _Mode: 0
+    - _Notransparency: 1
+    - _OcclusionStrength: 1
+    - _OffsetScroll: 1
+    - _Parallax: 0.02
+    - _Rotation: 0
+    - _RotationSpeed: 0.5
+    - _Scale1: 200
+    - _Scale2: 200
+    - _Scanlines: 0
+    - _ScanlinesX: 0
+    - _ScanlinesY: 0
+    - _ScanlinesYThreshold: 0
+    - _ScanlinesZ: 0
+    - _Scanlinesscale: 100
+    - _ScanlinesscaleX: 500
+    - _ScanlinesscaleY: 50
+    - _ScanlinesscaleZ: 4
+    - _Scanlinessmoothing: 19.1
+    - _Scanlinesspeed: -5
+    - _ScanlinesspeedX: 0
+    - _ScanlinesspeedY: 0
+    - _ScanlinesspeedZ: -5
+    - _ScrollOffset: 1
+    - _Scrolling: 0
+    - _ScrollingspeedX: 0.1
+    - _ScrollingspeedY: 0.1
+    - _Scrolloffset: 1
+    - _Scrollrotate: 1
+    - _Sharp: 0
+    - _SharpX: 1
+    - _SharpY: 1
+    - _SharpZ: 1
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _Speed1: -5
+    - _Speed2: -5
+    - _SrcBlend: 1
+    - _Tinttexture: 1
+    - _UVSec: 0
+    - _Verticalamplitude: 0.026
+    - _Verticalfreq: 10
+    - _Verticalmovement: 0
+    - _Verticalmovementamplitude: 0.2
+    - _Verticalmovementfreq: 10
+    - _Verticalmovementoffset: 0
+    - _Verticaloffset: 0
+    - _Verticalphase: 88888
+    - _Verticalstretch: 0
+    - _Verticalstretchamplitude: 0.2
+    - _Verticalstretchfreq: 20
+    - _Verticalstretchoffset: 0.1
+    - _Verticalstretchpivotpoint: 0
+    - _ZWrite: 1
+    - __dirty: 0
+    - _s: 0
+    m_Colors:
+    - _Color: {r: 1.2, g: 1.2, b: 1.2, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Masktextureoffset: {r: 0, g: 0, b: 0, a: 0}
+    - _Masktexturetiling: {r: 1, g: 1, b: 0, a: 0}
+    - _Offset: {r: 0, g: 0, b: 0, a: 0}
+    - _Scanlinespeed: {r: 0, g: -0.1, b: 0, a: 0}
+    - _Scanlinestiling: {r: 1, g: 2, b: 0, a: 0}
+    - _Scrollingspeed: {r: 0, g: 0, b: 0, a: 0}
+    - _Scrollspeed: {r: 1, g: 0, b: 0, a: 0}
+    - _Tiling: {r: 2, g: 2, b: 0, a: 0}
+    - _Tintcolor: {r: 1.2940001, g: 0, b: 0, a: 1}
+    - _Vector0: {r: 0.33, g: 0, b: 0, a: 0}
