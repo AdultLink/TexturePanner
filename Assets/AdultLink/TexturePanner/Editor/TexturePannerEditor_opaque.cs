@@ -243,7 +243,7 @@ public class TexturePannerEditor_opaque : ShaderGUI
             var rect = GUILayoutUtility.GetRect(0, int.MaxValue, 60, 60);
             EditorGUI.DrawPreviewTexture(rect, bannerTexture, null, ScaleMode.ScaleAndCrop);
             //
-            EditorGUI.LabelField(rect, "Texture Panner", title);
+            EditorGUI.LabelField(rect, "Texture Panner (opaque)", title);
 
             if (GUI.Button(rect, "", linkStyle)) {
                 Application.OpenURL(repoURL);
