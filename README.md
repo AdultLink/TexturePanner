@@ -1,5 +1,4 @@
-# TexturePanner [![License](https://img.shields.io/badge/License-MIT-lightgrey.svg?style=flat)](http://adultlink.mit-license.org) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/adultlink/5usd)
-![IntroImage](Screenshots/Misc.gif)
+# TexturePanner [![Follow](https://img.shields.io/github/followers/adultlink.svg?style=social&label=Follow)](https://github.com/adultlink) ![Size](https://img.shields.io/github/repo-size/adultlink/texturepanner.svg) [![License](https://img.shields.io/badge/License-MIT-lightgrey.svg?style=flat)](http://adultlink.mit-license.org) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/adultlink/5usd)  
 
 This shader is a glorified texture panner, with a few extra features oriented towards adding variety. By getting creative with mesh geometry and textures, we can achieve a wide range of results.
 
@@ -13,7 +12,7 @@ Project developed using **Unity 2017.4.8f1**. Please use this version if you are
 
 _(Beware: The screenshots folder is quite heavy at the moment, I need to find a way to reduce file size for gifs without losing too much quality)_
 
-You can also just download a **unitypackage** from the releases tab and easily import everything to your project. This will not download the _screenshots_ folder.
+You can also just download a **unitypackage** (lightweight) from the [releases tab](https://github.com/AdultLink/TexturePanner/releases) and easily import everything to your project. This will not download the _screenshots_ folder.
 
 # Table of contents
 1. [Setup](#setup)
