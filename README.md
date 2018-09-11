@@ -1,5 +1,9 @@
 # TexturePanner [![Follow](https://img.shields.io/github/followers/adultlink.svg?style=social&label=Follow)](https://github.com/adultlink) ![Size](https://img.shields.io/github/repo-size/adultlink/texturepanner.svg) [![License](https://img.shields.io/badge/License-MIT-lightgrey.svg?style=flat)](http://adultlink.mit-license.org) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/adultlink/5usd)  
 
+<p align="center">
+  <img src="https://github.com/AdultLink/TexturePanner/blob/master/Screenshots/Misc.gif" title="Misc" width="600" height="450">
+</p>
+
 This shader is a glorified texture panner, with a few extra features oriented towards adding variety. By getting creative with mesh geometry and textures, we can achieve a wide range of results.
 
 It can be edited through [Amplify Shader Editor](http://amplify.pt/unity/amplify-shader-editor) and contributions to the project are always welcome!
@@ -54,7 +58,9 @@ Furthermore, we can see both side faces are going against each other, thus break
 
 It is recommended to layout all the faces inside the UV square for cleaner results. This means our texture will stretch across all the faces, which me may not want, but we can always tile it in the inspector:
 
-![BlenderCubeUVs](Screenshots/BlenderCubeUVs.gif)
+<p align="center">
+  <img src="https://github.com/AdultLink/TexturePanner/blob/master/Screenshots/BlenderCubeUVs.gif" title="BasicCubeUVs" width="815" height="397">
+</p>
 <p align="center">
   <img src="https://github.com/AdultLink/TexturePanner/blob/master/Screenshots/BlenderCubeExample.gif" title="BasicExample">
 </p>
@@ -73,43 +79,57 @@ Texture tiling, offset and color mixing fall under this category. Color mixing o
 - `Multiply`: Direct multiplication of both colors.
 - `Replace`: Gives a new color to the whole texture.
 
-![ColorMixing](Screenshots/ColorMixing.gif)
+<p align="center">
+  <img src="https://github.com/AdultLink/TexturePanner/blob/master/Screenshots/ColorMixing.gif" title="BasicCubeUVs" width="600" height="508">
+</p>
 
 ## Emission
 
 This allows you to pulse the `Emission value` of the color, by specifying an amplitude and a frequency. By tweaking the offset value  we can also make it fade into transparency.
 
-![Emission](Screenshots/Emission.gif)
+<p align="center">
+  <img src="https://github.com/AdultLink/TexturePanner/blob/master/Screenshots/Emission.gif" title="Emission" width="600" height="439">
+</p>
 
 ## Scrolling/Rotation
 
 This module is the core of this shader. It allows you to **scroll** the texture in both axes, with independent speed values.
 
-![Scrolling](Screenshots/Scrolling.gif)
+<p align="center">
+  <img src="https://github.com/AdultLink/TexturePanner/blob/master/Screenshots/Scrolling.gif" title="Scrolling" width="600" height="307">
+</p>
 
 As an alternative, it is also possible to **rotate** the texture instead of scrolling it. In this case, it is advised to set the texture's wrap mode to `Clamp` instead of `Repeat`, otherwise, copies of the texture will sometimes bleed in through corners.
 
 It is also possible to disable both of these modes. This is useful in case we just want some scanlines scrolling through a static texture.
 
-![Scanlines1](Screenshots/Scanlines1.gif)
+<p align="center">
+  <img src="https://github.com/AdultLink/TexturePanner/blob/master/Screenshots/Scanlines1.gif" title="Scanlines1" width="600" height="355">
+</p>
 
 ## Scanlines
 
 Allows you to simulate transparent scanlines looping through the texture. By ticking/unticking the `Sharp` option, we can get a slightly different look.
 
-![Scanlines2](Screenshots/Scanlines2.gif)
+<p align="center">
+  <img src="https://github.com/AdultLink/TexturePanner/blob/master/Screenshots/Scanlines2.gif" title="Scanlines2" width="600" height="294">
+</p>
 
 ## Stretching
 
 By manipulating the vertices of the mesh we can make it stretch along the horizontal and the vertical axes. `Amplitude offset` comes in handy if you don't want the texture to ever reach a value of 0, and the `Origin offset` parameter allows you to offset the anchor point for the stretching.
 
-![Stretching](Screenshots/Stretching.gif)
+<p align="center">
+  <img src="https://github.com/AdultLink/TexturePanner/blob/master/Screenshots/Stretching.gif" title="Stretching" width="600" height="495">
+</p>
 
 ## Displacement
 
 Very similar to the previous concept, it allows for a displacement of the whole mesh.
 
-![Displacement](Screenshots/Displacement.gif)
+<p align="center">
+  <img src="https://github.com/AdultLink/TexturePanner/blob/master/Screenshots/Displacement.gif" title="Displacement" width="600" height="495">
+</p>
 
 ## Texture Masking
 
@@ -119,19 +139,25 @@ This way, we can easily fake geometries with textures, and use the main texture 
 
 This is an alternative way to use this shader.
 
-![TextureMasking](Screenshots/TextureMasking.gif)
+<p align="center">
+  <img src="https://github.com/AdultLink/TexturePanner/blob/master/Screenshots/TextureMasking.gif" title="TextureMasking" width="600" height="503">
+</p>
 
 # Examples
 
 3D space loading rings are a great application for scrolling textures, since you can easily create unique-looking pieces.
 
-![LoadingRings](Screenshots/LoadingRings.gif)
+<p align="center">
+  <img src="https://github.com/AdultLink/TexturePanner/blob/master/Screenshots/LoadingRings.gif" title="LoadingRings" width="600" height="438">
+</p>
 
 Conveyor belts are the prime example for texture scrolling, since they illustrate the concept perfectly.
 
 A slightly different version of the shader (TexturePanner_opaque) is used for these ones, which can cast and receive shadows.
 
-![ConveyorBelts](Screenshots/ConveyorBelts.gif)
+<p align="center">
+  <img src="https://github.com/AdultLink/TexturePanner/blob/master/Screenshots/ConveyorBelts.gif" title="ConveyorBelts" width="600" height="499">
+</p>
 
 Texture panning is a simple concept that we can take advantage of to create a huge variety of effects.
 
@@ -139,13 +165,17 @@ We are just simply scrolling said texture over a mesh, but the results we can ac
 
 By stretching the mesh and scrolling the texture at high speeds, we get a twitchy behaviour, resembling the appearance of spaceship thrusters.
 
-![ThrustersExample](Screenshots/Thrusters.gif)
+<p align="center">
+  <img src="https://github.com/AdultLink/TexturePanner/blob/master/Screenshots/Thrusters.gif" title="Thrusters" width="600" height="387">
+</p>
 
 Given the appropriate mesh and UV setup, this shader can be used to achieve that futuristic cyberpunk neon ad look, including scanlines.
 
 Also, _A E S T H E T I C_.
 
-![Buildings](Screenshots/Buildings.gif)
+<p align="center">
+  <img src="https://github.com/AdultLink/TexturePanner/blob/master/Screenshots/Buildings.gif" title="Buildings" width="600" height="447">
+</p>
 
 Imagination is the limit!
 
