@@ -151,7 +151,7 @@ Material:
     - _Verticalstretchoffset: 0
     - _Verticalstretchpivotpoint: 0
     - _ZWrite: 1
-    - __dirty: 0
+    - __dirty: 1
     - _s: 0
     m_Colors:
     - _Color: {r: 0.9338235, g: 0.6767852, b: 0.1235943, a: 1}
