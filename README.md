@@ -18,6 +18,8 @@ _(Beware: The screenshots folder is quite heavy at the moment, I need to find a 
 
 You can also just download a **unitypackage** (lightweight) from the [releases tab](https://github.com/AdultLink/TexturePanner/releases) and easily import everything to your project. This will not download the _screenshots_ folder.
 
+_Disclaimer: The scripts controlling the behavior of the examples provided are not optimized in any way and should only be taken as quick & dirty examples._
+
 # Table of contents
 1. [Setup](#setup)
    - 1.1 [Getting started](#getting-started)
